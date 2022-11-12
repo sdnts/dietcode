@@ -19,21 +19,23 @@ export function PostList({ posts, prefix: hrefPrefix }: Props) {
       </span>
       <ul className="ml-5 flex flex-col space-y-2">
         {posts.map((p) => (
-          <span key={p.slug} className="flex">
-            -&nbsp;
-            <Item href={`/${hrefPrefix}/${p.slug}`}>{p.title}</Item>
-          </span>
+          <Item key={p.slug} href={`/${hrefPrefix}/${p.slug}`} title={p.title}>
+            {p.title}
+          </Item>
         ))}
       </ul>
     </section>
   );
 }
 
-type ItemProps = PropsWithChildren<{ href: string }>;
-function Item({ href, children }: ItemProps) {
+type ItemProps = PropsWithChildren<{ title: string; href: string }>;
+function Item({ title, href, children }: ItemProps) {
   return (
-    <Link to={href} className="underline underline-offset-4">
-      <li>{children}</li>
-    </Link>
+    <li>
+      -&nbsp;
+      <Link to={href} className="underline underline-offset-4" title={title}>
+        {children}
+      </Link>
+    </li>
   );
 }
