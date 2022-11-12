@@ -4,7 +4,7 @@ import { PropsWithChildren } from "react";
 
 export function Header() {
   return (
-    <header className="mt-8 mb-16 lg:mt-12 lg:mb-24">
+    <header className="mt-8 mb-16 lg:mt-12 lg:mb-18">
       <nav className="flex justify-between items-center">
         <ul className="flex space-x-8 font-mono text-sm">
           <Item href="/">/</Item>
