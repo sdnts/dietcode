@@ -16,6 +16,10 @@ module.exports = {
       transparent: "rgba(0, 0, 0, 0)",
     },
     extend: {
+      fontFamily: {
+        sans: ["Inter"],
+        mono: ["JetBrains Mono"],
+      },
       typography: ({ theme }) => ({
         default: {
           css: {

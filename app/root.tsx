@@ -21,6 +21,10 @@ export const meta: MetaFunction = () => ({
 
 export function links() {
   return [
+    {
+      rel: "stylesheet",
+      href: "https://fonts.bunny.net/css?family=inter:400,900|jetbrains-mono:400&display=swap",
+    },
     { rel: "stylesheet", href: styles },
     {
       rel: "stylesheet",

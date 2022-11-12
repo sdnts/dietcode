@@ -17,11 +17,12 @@ export function PostList({ posts, prefix: hrefPrefix }: Props) {
       <span className={clsx("text-2xl font-mono text-crimson-9")}>
         {hrefPrefix}
       </span>
-      <ul className="ml-6 flex flex-col space-y-2">
+      <ul className="ml-5 flex flex-col space-y-2">
         {posts.map((p) => (
-          <Item key={p.slug} href={`/${hrefPrefix}/${p.slug}`}>
-            {p.title}
-          </Item>
+          <span key={p.slug} className="flex">
+            -&nbsp;
+            <Item href={`/${hrefPrefix}/${p.slug}`}>{p.title}</Item>
+          </span>
         ))}
       </ul>
     </section>

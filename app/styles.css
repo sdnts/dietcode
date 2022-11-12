@@ -43,7 +43,7 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Inter;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -126,7 +126,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: JetBrains Mono;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -995,44 +995,24 @@ video {
   margin-right: 2rem;
 }
 
-.mt-8 {
-  margin-top: 2rem;
-}
-
-.mb-12 {
-  margin-bottom: 3rem;
-}
-
-.ml-6 {
-  margin-left: 1.5rem;
-}
-
 .mt-48 {
   margin-top: 12rem;
 }
 
-.mt-12 {
-  margin-top: 3rem;
-}
-
-.mb-24 {
-  margin-bottom: 6rem;
+.mt-8 {
+  margin-top: 2rem;
 }
 
 .mb-16 {
   margin-bottom: 4rem;
 }
 
-.mb-8 {
-  margin-bottom: 2rem;
+.ml-5 {
+  margin-left: 1.25rem;
 }
 
 .flex {
   display: flex;
-}
-
-.h-8 {
-  height: 2rem;
 }
 
 .h-12 {
@@ -1069,10 +1049,10 @@ video {
   margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.space-y-8 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
@@ -1087,14 +1067,10 @@ video {
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
-.space-x-2 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
-  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
-.border {
-  border-width: 1px;
+.space-y-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 
 .bg-mauve-1 {
@@ -1103,17 +1079,7 @@ video {
 }
 
 .font-mono {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
-
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-family: JetBrains Mono;
 }
 
 .text-9xl {
@@ -1126,14 +1092,19 @@ video {
   line-height: 1.75rem;
 }
 
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .text-mauve-12 {
   --tw-text-opacity: 1;
   color: hsl(256 6.0% 93.2% / var(--tw-text-opacity));
-}
-
-.text-mauve-11 {
-  --tw-text-opacity: 1;
-  color: hsl(253 4.0% 63.7% / var(--tw-text-opacity));
 }
 
 .text-crimson-9 {
@@ -1141,9 +1112,9 @@ video {
   color: hsl(336 80.0% 57.8% / var(--tw-text-opacity));
 }
 
-.text-crimson-10 {
+.text-mauve-11 {
   --tw-text-opacity: 1;
-  color: hsl(339 84.1% 62.6% / var(--tw-text-opacity));
+  color: hsl(253 4.0% 63.7% / var(--tw-text-opacity));
 }
 
 .underline {
@@ -1158,17 +1129,13 @@ video {
   text-underline-offset: 4px;
 }
 
-.filter {
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 .hover\:text-mauve-12:hover {
   --tw-text-opacity: 1;
   color: hsl(256 6.0% 93.2% / var(--tw-text-opacity));
 }
 
 .prose-h1\:font-mono :is(:where(h1):not(:where([class~="not-prose"] *))) {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: JetBrains Mono;
 }
 
 .prose-h1\:font-medium :is(:where(h1):not(:where([class~="not-prose"] *))) {
@@ -1176,7 +1143,7 @@ video {
 }
 
 .prose-h2\:font-mono :is(:where(h2):not(:where([class~="not-prose"] *))) {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: JetBrains Mono;
 }
 
 .prose-h2\:font-medium :is(:where(h2):not(:where([class~="not-prose"] *))) {
@@ -1184,7 +1151,7 @@ video {
 }
 
 .prose-h3\:font-mono :is(:where(h3):not(:where([class~="not-prose"] *))) {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: JetBrains Mono;
 }
 
 .prose-h3\:font-medium :is(:where(h3):not(:where([class~="not-prose"] *))) {
@@ -1192,7 +1159,7 @@ video {
 }
 
 .prose-h4\:font-mono :is(:where(h4):not(:where([class~="not-prose"] *))) {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: JetBrains Mono;
 }
 
 .prose-h4\:font-medium :is(:where(h4):not(:where([class~="not-prose"] *))) {
@@ -1200,7 +1167,7 @@ video {
 }
 
 .prose-h5\:font-mono :is(:where(h5):not(:where([class~="not-prose"] *))) {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: JetBrains Mono;
 }
 
 .prose-h5\:font-medium :is(:where(h5):not(:where([class~="not-prose"] *))) {
@@ -1208,15 +1175,11 @@ video {
 }
 
 .prose-h6\:font-mono :is(:where(h6):not(:where([class~="not-prose"] *))) {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: JetBrains Mono;
 }
 
 .prose-h6\:font-medium :is(:where(h6):not(:where([class~="not-prose"] *))) {
   font-weight: 500;
-}
-
-.prose-code\:p-0 :is(:where(code):not(:where([class~="not-prose"] *))) {
-  padding: 0px;
 }
 
 .prose-pre\:p-0 :is(:where(pre):not(:where([class~="not-prose"] *))) {
@@ -1235,14 +1198,6 @@ video {
 
   .lg\:mt-24 {
     margin-top: 6rem;
-  }
-
-  .lg\:mb-12 {
-    margin-bottom: 3rem;
-  }
-
-  .lg\:mb-24 {
-    margin-bottom: 6rem;
   }
 
   .lg\:max-w-\[960px\] {
