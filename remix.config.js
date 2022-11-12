@@ -4,8 +4,11 @@ module.exports = {
   server: "./server.js",
   devServerBroadcastDelay: 1000,
   ignoredRouteFiles: ["**/.*"],
-  // appDirectory: "app",
-  // assetsBuildDirectory: "public/build",
-  // serverBuildPath: "functions/[[path]].js",
-  // publicPath: "/build/",
+  mdx: async (filename) => {
+    return {
+      rehypePlugins: [
+        await import("rehype-highlight").then((mod) => mod.default),
+      ],
+    };
+  },
 };
