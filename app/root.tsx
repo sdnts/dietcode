@@ -22,10 +22,18 @@ export const meta: MetaFunction = () => ({
 export function links() {
   return [
     {
+      rel: "preconnect",
+      href: "https://fonts.bunny.net",
+    },
+    {
       rel: "stylesheet",
       href: "https://fonts.bunny.net/css?family=inter:400,900|jetbrains-mono:400&display=swap",
     },
     { rel: "stylesheet", href: styles },
+    {
+      rel: "preconnect",
+      href: "https://cdnjs.cloudflare.com",
+    },
     {
       rel: "stylesheet",
       href: "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github-dark-dimmed.min.css",

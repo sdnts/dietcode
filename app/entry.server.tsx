@@ -9,10 +9,6 @@ export default function handleRequest(
   responseHeaders: Headers,
   remixContext: EntryContext
 ) {
-  const markup = renderToString(
-    <RemixServer context={remixContext} url={request.url} />
-  );
-
   if (request.url.endsWith("feed.xml")) {
     return new Response(rss(), {
       status: 200,
@@ -21,6 +17,10 @@ export default function handleRequest(
       },
     });
   }
+
+  const markup = renderToString(
+    <RemixServer context={remixContext} url={request.url} />
+  );
 
   responseHeaders.set("Content-Type", "text/html");
 
