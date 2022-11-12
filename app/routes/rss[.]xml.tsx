@@ -1,5 +1,5 @@
-import { posts } from "./posts/_posts";
-import { posts as til } from "./til/_til";
+import { posts } from "./posts/_data";
+import { posts as til } from "./til/_data";
 
 export default function RSS() {
   let items = [...posts, ...til].map((post) => {
