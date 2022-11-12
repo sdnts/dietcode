@@ -12,7 +12,7 @@ export function Header() {
           <Item href="/posts">/posts</Item>
         </ul>
 
-        <Link to="/rss">
+        <Link to="/rss.xml">
           <Rss weight="bold" size={18} />
         </Link>
       </nav>

@@ -1,15 +1,10 @@
 import { json } from "@remix-run/cloudflare";
-import type { Post } from "~/components/PostList";
+import { mdxToPosts } from "~/util/mdxToPosts";
 
 import * as tls from "./tls.mdx";
 
-function postFromModule(mod: any): Post {
-  return {
-    slug: mod.filename.replace(/\.mdx?$/, ""),
-    ...mod.attributes.meta,
-  };
-}
+export const posts = mdxToPosts([tls]);
 
 export async function loader() {
-  return json([postFromModule(tls)]);
+  return json(posts);
 }

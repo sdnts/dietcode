@@ -5,6 +5,8 @@ import { PropsWithChildren } from "react";
 export type Post = {
   slug: string;
   title: string;
+  description?: string;
+  date: string;
 };
 
 type Props = { posts: Post[] };
@@ -14,7 +16,9 @@ export function PostList({ posts }: Props) {
       <span className={clsx("text-2xl font-mono text-crimson-9")}>til</span>
       <ul className="ml-6 flex flex-col space-y-2">
         {posts.map((p) => (
-          <Item href={`/til/${p.slug}`}>{p.title}</Item>
+          <Item key={p.slug} href={`/til/${p.slug}`}>
+            {p.title}
+          </Item>
         ))}
       </ul>
     </section>

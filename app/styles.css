@@ -1136,6 +1136,10 @@ video {
   text-underline-offset: 4px;
 }
 
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .hover\:text-mauve-12:hover {
   --tw-text-opacity: 1;
   color: hsl(256 6.0% 93.2% / var(--tw-text-opacity));
