@@ -1,7 +1,7 @@
 import type { EntryContext } from "@remix-run/cloudflare";
 import { RemixServer } from "@remix-run/react";
-import { default as rss } from "app/routes/rss[.]xml";
 import { renderToString } from "react-dom/server";
+import { default as rss } from "~/routes/feed[.]xml";
 
 export default function handleRequest(
   request: Request,
@@ -13,7 +13,7 @@ export default function handleRequest(
     <RemixServer context={remixContext} url={request.url} />
   );
 
-  if (request.url.endsWith("rss.xml")) {
+  if (request.url.endsWith("feed.xml")) {
     return new Response(rss(), {
       status: 200,
       headers: {
