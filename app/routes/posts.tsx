@@ -1,16 +1,22 @@
 import { Outlet, useMatches } from "@remix-run/react";
-import clsx from "clsx";
+import { Prose } from "~/components/Prose";
 
-export default function Posts() {
+export default function TIL() {
   const matches = useMatches();
+  const isIndex = matches[matches.length - 1].pathname === "/posts/";
+
+  // On /posts, do not format content as prose
+  if (isIndex) {
+    return (
+      <main>
+        <Outlet />
+      </main>
+    );
+  }
 
   return (
-    <main
-      className={clsx({
-        prose: matches[matches.length - 1].pathname !== "/posts/",
-      })}
-    >
+    <Prose>
       <Outlet />
-    </main>
+    </Prose>
   );
 }

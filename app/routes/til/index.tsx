@@ -1,10 +1,14 @@
+import { json } from "@remix-run/cloudflare";
 import { useLoaderData } from "@remix-run/react";
 import { Post, PostList } from "~/components/PostList";
+import { tils } from "./_data";
 
-export { loader } from "./_data";
+export async function loader() {
+  return json(tils);
+}
 
 export default function Index() {
-  const posts = useLoaderData<Post[]>();
+  const tils = useLoaderData<Post[]>();
 
-  return <PostList posts={posts} prefix="til" />;
+  return <PostList title="til" posts={tils} />;
 }

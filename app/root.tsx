@@ -27,7 +27,7 @@ export function links() {
     },
     {
       rel: "stylesheet",
-      href: "https://fonts.bunny.net/css?family=inter:400,900|jetbrains-mono:400&display=swap",
+      href: "https://fonts.bunny.net/css?family=inter:400,800|jetbrains-mono:400&display=swap",
     },
     { rel: "stylesheet", href: styles },
     {
@@ -54,7 +54,7 @@ export default function App() {
         <Links />
       </head>
       <body className={clsx("flex justify-center", "bg-mauve-1 text-mauve-12")}>
-        <div className="w-full mx-8 lg:max-w-[960px] lg:mx-0">
+        <div className="w-full max-w-[65ch] mx-8 lg:mx-0">
           <Header />
           <Outlet />
         </div>
@@ -77,7 +77,7 @@ export function CatchBoundary() {
         <Links />
       </head>
       <body className={clsx("flex justify-center", "bg-mauve-1 text-mauve-12")}>
-        <div className="w-full mx-8 lg:max-w-[960px] lg:mx-0">
+        <div className="w-full max-w-[65ch] mx-8 lg:mx-0">
           <Header />
 
           <div className="flex flex-col justify-center items-center mt-48">

@@ -1023,6 +1023,10 @@ video {
   width: 100%;
 }
 
+.max-w-\[65ch\] {
+  max-width: 65ch;
+}
+
 .list-none {
   list-style-type: none;
 }
@@ -1184,6 +1188,13 @@ video {
 
 .prose-pre\:p-0 :is(:where(pre):not(:where([class~="not-prose"] *))) {
   padding: 0px;
+}
+
+@media (min-width: 768px) {
+  .md\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
 
 @media (min-width: 1024px) {

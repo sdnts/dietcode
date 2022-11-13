@@ -1,22 +1,8 @@
-import type { Post } from "~/components/PostList";
+import { sort } from "~/util/sort";
 import { posts } from "./posts/_data";
-import { posts as til } from "./til/_data";
+import { tils } from "./til/_data";
 
 export default function RSS() {
-  function items(posts: Post[], prefix: string) {
-    return posts.map(
-      (p) =>
-        `
-        <item>
-          <title>${p.title}</title>
-          <description>${p.description ?? p.title}</description>
-          <pubDate>${new Date(p.date).toUTCString()}</pubDate>
-          <guid>https://dietcode.io/${prefix}/${p.slug}</guid>
-        </item>
-        `
-    );
-  }
-
   return `<?xml version="1.0"?>
     <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
       <channel>
@@ -28,9 +14,17 @@ export default function RSS() {
         <generator>N/A</generator>
         <ttl>40</ttl>
 
-        ${items(posts, "posts").join("\n")}
-        ${items(til, "til").join("\n")}
-
+        ${sort([...tils, ...posts]).map(
+          (p) =>
+            `
+            <item>
+              <title>${p.title}</title>
+              <description>${p.description ?? p.title}</description>
+              <pubDate>${new Date(p.date).toUTCString()}</pubDate>
+              <guid>https://dietcode.io/${p.kind}/${p.slug}</guid>
+            </item>
+            `
+        )}
       </channel>
     </rss>`;
 }

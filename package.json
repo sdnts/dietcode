@@ -6,7 +6,9 @@
     "dev:wrangler": "wrangler pages dev ./public",
     "build": "NODE_ENV=production run-s build:css build:remix",
     "build:css": "tailwindcss -m -i ./app/_styles.css -o app/styles.css",
-    "build:remix": "remix build"
+    "build:remix": "remix build",
+    "types": "tsc --noEmit",
+    "format": "prettier --ignore-path=.gitignore -c . \"!.yarn/**\" \"!**/*styles.css\""
   },
   "dependencies": {
     "@remix-run/cloudflare": "1.7.5",

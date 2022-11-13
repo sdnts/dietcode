@@ -1,12 +1,12 @@
 import { PostList } from "~/components/PostList";
 import { posts } from "./posts/_data";
-import { posts as til } from "./til/_data";
+import { tils } from "./til/_data";
 
 export default function Index() {
   return (
     <div className="space-y-8">
-      <PostList posts={til} prefix="til" />
-      <PostList posts={posts} prefix="posts" />
+      <PostList title="til" posts={tils} />
+      <PostList title="posts" posts={posts} />
     </div>
   );
 }
