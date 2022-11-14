@@ -1,5 +1,5 @@
 import { PostList } from "~/components/PostList";
-import { posts } from "./posts/_data";
+import { posts } from "./post/_data";
 import { tils } from "./til/_data";
 
 export default function Index() {

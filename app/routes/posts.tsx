@@ -1,22 +1,18 @@
-import { Outlet, useMatches } from "@remix-run/react";
-import { Prose } from "~/components/Prose";
+import { json } from "@remix-run/cloudflare";
+import { useLoaderData } from "@remix-run/react";
+import { Post, PostList } from "~/components/PostList";
+import { posts } from "./post/_data";
 
-export default function TIL() {
-  const matches = useMatches();
-  const isIndex = matches[matches.length - 1].pathname === "/posts/";
+export async function loader() {
+  return json(posts);
+}
 
-  // On /posts, do not format content as prose
-  if (isIndex) {
-    return (
-      <main>
-        <Outlet />
-      </main>
-    );
-  }
+export default function Index() {
+  const posts = useLoaderData<Post[]>();
 
   return (
-    <Prose>
-      <Outlet />
-    </Prose>
+    <main>
+      <PostList title="posts" posts={posts} />
+    </main>
   );
 }
