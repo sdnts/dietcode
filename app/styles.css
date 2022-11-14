@@ -995,6 +995,10 @@ video {
   margin-right: 2rem;
 }
 
+.mb-24 {
+  margin-bottom: 6rem;
+}
+
 .mt-48 {
   margin-top: 12rem;
 }
@@ -1190,13 +1194,6 @@ video {
   padding: 0px;
 }
 
-@media (min-width: 768px) {
-  .md\:mx-0 {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-}
-
 @media (min-width: 1024px) {
   .lg\:mx-0 {
     margin-left: 0px;
@@ -1205,9 +1202,5 @@ video {
 
   .lg\:mt-12 {
     margin-top: 3rem;
-  }
-
-  .lg\:max-w-\[960px\] {
-    max-width: 960px;
   }
 }
