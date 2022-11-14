@@ -3,9 +3,10 @@ import clsx from "clsx";
 
 export type Post = {
   kind: "til" | "post";
-  slug: string;
   title: string;
   description?: string;
+  slug: string;
+  href: string;
   date: string;
   tags: string[];
 };
@@ -17,7 +18,7 @@ export function PostList({ title, posts }: Props) {
       <span className={clsx("text-2xl font-mono text-crimson-9")}>{title}</span>
       <ul className="ml-5 flex flex-col space-y-2">
         {posts.map((p) => (
-          <Item key={p.slug} href={`/${p.kind}/${p.slug}`} title={p.title} />
+          <Item key={p.slug} href={p.href} title={p.title} />
         ))}
       </ul>
     </section>
