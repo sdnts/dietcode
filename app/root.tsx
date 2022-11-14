@@ -53,7 +53,13 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className={clsx("flex justify-center", "bg-mauve-1 text-mauve-12")}>
+      <body
+        className={clsx(
+          "flex justify-center",
+          "bg-mauve-1 text-mauve-12",
+          "mb-24"
+        )}
+      >
         <div className="w-full max-w-[65ch] mx-8 lg:mx-0">
           <Header />
           <Outlet />
@@ -84,7 +90,9 @@ export function CatchBoundary() {
             <h1 className="text-9xl text-crimson-9 font-mono">
               {caught.status}
             </h1>
-            <h3 className="mt-8 text-xl">{caught.statusText}</h3>
+            <h3 className="mt-8 text-xl">
+              {caught.statusText ?? "Unknown Error"}
+            </h3>
           </div>
         </div>
         <ScrollRestoration />
