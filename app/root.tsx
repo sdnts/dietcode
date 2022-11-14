@@ -7,7 +7,6 @@ import {
   Scripts,
   ScrollRestoration,
   useCatch,
-  useMatches,
 } from "@remix-run/react";
 import clsx from "clsx";
 import { Header } from "./components/Header";
@@ -42,11 +41,6 @@ export function links() {
 }
 
 export default function App() {
-  const matches = useMatches();
-  const includeScripts = matches.some(
-    (match) => match.handle?.interactive ?? false
-  );
-
   return (
     <html lang="en">
       <head>
@@ -65,7 +59,7 @@ export default function App() {
           <Outlet />
         </div>
         <ScrollRestoration />
-        {includeScripts ? <Scripts /> : null}
+        <Scripts />
         <LiveReload />
       </body>
     </html>

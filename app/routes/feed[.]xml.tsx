@@ -1,8 +1,15 @@
 import { sort } from "~/util/sort";
-import { posts } from "./post/_data";
-import { tils } from "./til/_data";
+import { data as posts } from "./p/_data";
+import { data as tils } from "./t/_data";
 
-export default function RSS() {
+/**
+ * This is not actually a page, the Feed function is called from the server
+ * entrypoint manually.
+ */
+
+export default function Feed() {
+  const items = sort([...tils(), ...posts()]);
+
   return `<?xml version="1.0"?>
     <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
       <channel>
@@ -14,17 +21,18 @@ export default function RSS() {
         <generator>N/A</generator>
         <ttl>40</ttl>
 
-        ${sort([...tils, ...posts]).map(
-          (p) =>
-            `
+        ${items
+          .map(
+            (p) => `
             <item>
               <title>${p.title}</title>
               <description>${p.description ?? p.title}</description>
               <pubDate>${new Date(p.date).toUTCString()}</pubDate>
-              <guid>https://dietcode.io/${p.kind}/${p.slug}</guid>
+              <guid>https://dietcode.io/${p.href}</guid>
             </item>
             `
-        )}
+          )
+          .join("\n")}
       </channel>
     </rss>`;
 }

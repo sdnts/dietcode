@@ -10,7 +10,7 @@ export function Prose({ children }: Props) {
     matches[matches.length - 1].pathname === "/posts/";
 
   return (
-    <main
+    <section
       className={clsx({
         "prose prose-default": !isRoot,
         "prose-h1:font-mono prose-h1:font-medium": !isRoot,
@@ -23,6 +23,6 @@ export function Prose({ children }: Props) {
       })}
     >
       {children}
-    </main>
+    </section>
   );
 }
