@@ -6,7 +6,7 @@ export function Metadata({ date: _date, tags = [] }: Post) {
   return (
     <div className="flex items-center justify-between text-mauve-11 h-12">
       <div>
-        {date.getDate()}-{date.getMonth()}-{date.getFullYear()}
+        {date.getDate()}-{date.getMonth() + 1}-{date.getFullYear()}
       </div>
 
       <ul className="flex list-none space-x-2">
