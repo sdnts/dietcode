@@ -990,6 +990,18 @@ video {
   --tw-prose-td-borders: hsl(245, 4.9%, 25.4%);
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.-left-5 {
+  left: -1.25rem;
+}
+
 .mx-8 {
   margin-left: 2rem;
   margin-right: 2rem;
@@ -1011,12 +1023,12 @@ video {
   margin-bottom: 4rem;
 }
 
-.ml-5 {
-  margin-left: 1.25rem;
-}
-
 .mt-12 {
   margin-top: 3rem;
+}
+
+.ml-5 {
+  margin-left: 1.25rem;
 }
 
 .flex {
@@ -1137,21 +1149,45 @@ video {
   text-decoration-line: underline;
 }
 
-.underline-offset-8 {
-  text-underline-offset: 8px;
+.no-underline {
+  text-decoration-line: none;
 }
 
-.underline-offset-4 {
-  text-underline-offset: 4px;
+.underline-offset-8 {
+  text-underline-offset: 8px;
 }
 
 .underline-offset-2 {
   text-underline-offset: 2px;
 }
 
+.underline-offset-4 {
+  text-underline-offset: 4px;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.hover\:cursor-pointer:hover {
+  cursor: pointer;
+}
+
 .hover\:text-mauve-12:hover {
   --tw-text-opacity: 1;
   color: hsl(256 6.0% 93.2% / var(--tw-text-opacity));
+}
+
+.hover\:underline:hover {
+  text-decoration-line: underline;
+}
+
+.hover\:underline-offset-2:hover {
+  text-underline-offset: 2px;
+}
+
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1;
 }
 
 .prose-h1\:font-mono :is(:where(h1):not(:where([class~="not-prose"] *))) {
