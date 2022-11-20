@@ -1,5 +1,5 @@
 import { Link } from "@remix-run/react";
-import { Rss } from "phosphor-react";
+import { At, Rss } from "phosphor-react";
 import { PropsWithChildren } from "react";
 
 export function Header() {
@@ -12,9 +12,15 @@ export function Header() {
           <Item href="/posts">/posts</Item>
         </ul>
 
-        <Link to="/feed.xml" title="RSS feed">
-          <Rss weight="bold" size={18} />
-        </Link>
+        <ul className="flex space-x-4 items-center">
+          <a rel="me" href="https://hachyderm.io/@sid" title="Mastodon">
+            <At weight="bold" size={18} />
+          </a>
+
+          <Link to="/feed.xml" title="RSS feed">
+            <Rss weight="bold" size={18} />
+          </Link>
+        </ul>
       </nav>
     </header>
   );
