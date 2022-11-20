@@ -1238,6 +1238,10 @@ video {
   font-weight: 500;
 }
 
+.prose-a\:break-all :is(:where(a):not(:where([class~="not-prose"] *))) {
+  word-break: break-all;
+}
+
 .prose-pre\:p-0 :is(:where(pre):not(:where([class~="not-prose"] *))) {
   padding: 0px;
 }

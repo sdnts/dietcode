@@ -25,7 +25,7 @@ export default function Feed() {
           .map(
             (p) => `
             <item>
-              <title>${p.title}</title>
+              <title>${p.kind === "til" ? "TIL: " : ""}${p.title}</title>
               <description>${p.description ?? p.title}</description>
               <pubDate>${new Date(p.date).toUTCString()}</pubDate>
               <guid>https://dietcode.io/${p.href}</guid>

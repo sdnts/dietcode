@@ -20,6 +20,7 @@ export function Prose({ children }: Props) {
         "prose-h5:font-mono prose-h5:font-medium": !isRoot,
         "prose-h6:font-mono prose-h6:font-medium": !isRoot,
         "prose-pre:p-0": !isRoot,
+        "prose-a:break-all": !isRoot,
       })}
     >
       {children}
