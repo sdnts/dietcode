@@ -17,9 +17,9 @@ export function Header() {
             <At weight="bold" size={18} />
           </a>
 
-          <Link to="/feed.xml" title="RSS feed">
+          <a href="/feed.xml" title="RSS feed">
             <Rss weight="bold" size={18} />
-          </Link>
+          </a>
         </ul>
       </nav>
     </header>
