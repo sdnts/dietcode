@@ -1248,8 +1248,22 @@ video {
   word-break: break-all;
 }
 
+.prose-pre\:whitespace-pre-wrap :is(:where(pre):not(:where([class~="not-prose"] *))) {
+  white-space: pre-wrap;
+}
+
 .prose-pre\:p-0 :is(:where(pre):not(:where([class~="not-prose"] *))) {
   padding: 0px;
+}
+
+.prose-img\:mx-auto :is(:where(img):not(:where([class~="not-prose"] *))) {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose-img\:w-fit :is(:where(img):not(:where([class~="not-prose"] *))) {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 @media (min-width: 1024px) {
