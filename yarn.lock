@@ -1828,21 +1828,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@solidjs/meta@npm:0.28.0":
-  version: 0.28.0
-  resolution: "@solidjs/meta@npm:0.28.0"
+"@solidjs/meta@npm:0.28.2":
+  version: 0.28.2
+  resolution: "@solidjs/meta@npm:0.28.2"
   peerDependencies:
     solid-js: ">=1.4.0"
-  checksum: acf6c9880cd02179b1eaad2aa6a45987cb7b77132a130bef83e123e36a6f5ea8fd7b3bfdce5667ec0c4140680f596915313bc67cc82b7df9f17258eaf6e45a76
+  checksum: ec7a0e340a7108cd217907ea464dad6f5fe90f02bf716c845bf9f1d22ee5a6569a40d77aa638d5780ff0ead6c2f46cb76c3ca95522339356339aec47fd8a8c6c
   languageName: node
   linkType: hard
 
-"@solidjs/router@npm:0.5.0":
-  version: 0.5.0
-  resolution: "@solidjs/router@npm:0.5.0"
+"@solidjs/router@npm:0.5.1":
+  version: 0.5.1
+  resolution: "@solidjs/router@npm:0.5.1"
   peerDependencies:
     solid-js: ^1.5.3
-  checksum: f066bf3d44e3fd93e3dcb910c08e98da9013c7b1f6922f2b4d458a07ff6c060d856f76b94ba984c19e2d5a57077b36df246401dcd9e433f28550d62b743b07e4
+  checksum: 522018eb8d9ce90309ef96b996637391f49404722e26499a266ed632cf1b9c158b6ec858d104e32c646b4c67da3c3865fef9c5dd8e5dcddd1fde96b767fbe915
   languageName: node
   linkType: hard
 
@@ -2789,22 +2789,22 @@ __metadata:
   dependencies:
     "@mdx-js/rollup": 2.1.5
     "@radix-ui/colors": 0.1.8
-    "@solidjs/meta": 0.28.0
-    "@solidjs/router": 0.5.0
+    "@solidjs/meta": 0.28.2
+    "@solidjs/router": 0.5.1
     "@tailwindcss/typography": 0.5.8
     autoprefixer: 10.4.13
     clsx: 1.2.1
     postcss: 8.4.19
     prettier: 2.8.0
     rehype-highlight: 6.0.0
-    solid-js: 1.6.0
+    solid-js: 1.6.2
     solid-mdx: 0.0.6
-    solid-start: 0.2.0
+    solid-start: 0.2.5
     solid-start-cloudflare-pages: 0.2.5
     tailwindcss: 3.2.4
-    typescript: 4.8.4
-    undici: 5.11.0
-    vite: 3.1.8
+    typescript: 4.9.3
+    undici: 5.12.0
+    vite: 3.2.4
   languageName: unknown
   linkType: soft
 
@@ -5293,7 +5293,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.4.19, postcss@npm:^8.4.16, postcss@npm:^8.4.18":
+"postcss@npm:8.4.19, postcss@npm:^8.4.18":
   version: 8.4.19
   resolution: "postcss@npm:8.4.19"
   dependencies:
@@ -5598,20 +5598,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:~2.78.0":
-  version: 2.78.1
-  resolution: "rollup@npm:2.78.1"
-  dependencies:
-    fsevents: ~2.3.2
-  dependenciesMeta:
-    fsevents:
-      optional: true
-  bin:
-    rollup: dist/bin/rollup
-  checksum: 9034814383ca5bdb4bea6d499270aeb31cdb0bb884f81b0c6a1d19c63cc973f040e6ee09b7af8a7169dd231c090f4b44ef8b99c4bfdf884aceeb3dcefb8cfa14
-  languageName: node
-  linkType: hard
-
 "route-sort@npm:^1.0.0":
   version: 1.0.0
   resolution: "route-sort@npm:1.0.0"
@@ -5779,12 +5765,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"solid-js@npm:1.6.0":
-  version: 1.6.0
-  resolution: "solid-js@npm:1.6.0"
+"solid-js@npm:1.6.2":
+  version: 1.6.2
+  resolution: "solid-js@npm:1.6.2"
   dependencies:
     csstype: ^3.1.0
-  checksum: a1d655242b1bae82ebdd457deaa99e3874351ecf2447ccf1d3b09c5d862c9eb1b123e244dbe73e107a4ff08452e5857970189f8d2c401debda868b383027a069
+  checksum: 4062ce398440b78e6d01d233403cca442d4b5fc4dfd70e7cbdd911c9faea0ed3cf42ce2979c88797c5a7b371710ab33e78c8a67dd6610f741a25d108ab2f64e0
   languageName: node
   linkType: hard
 
@@ -5836,9 +5822,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"solid-start@npm:0.2.0":
-  version: 0.2.0
-  resolution: "solid-start@npm:0.2.0"
+"solid-start@npm:0.2.5":
+  version: 0.2.5
+  resolution: "solid-start@npm:0.2.5"
   dependencies:
     "@babel/core": ^7.19.6
     "@babel/generator": ^7.19.6
@@ -5878,7 +5864,8 @@ __metadata:
   bin:
     solid: bin.cjs
     solid-start: bin.cjs
-  checksum: 4036f4be3a5ad4633b1068472b3b339365a61097d2f86aaa1674cee63ff92c076803f91d160be966dadfa956b090568614d2303ddc1b28521f0eff81cedf6e0c
+    start: bin.cjs
+  checksum: fe743789a96b661868df1b8498f9889fef46f3325096f6e15fd19b1a7c1037d588788c15cf2c3d8f722444da7d4249cf81c8378674b235b125660eb4beec8449
   languageName: node
   linkType: hard
 
@@ -6136,23 +6123,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:4.8.4":
-  version: 4.8.4
-  resolution: "typescript@npm:4.8.4"
+"typescript@npm:4.9.3":
+  version: 4.9.3
+  resolution: "typescript@npm:4.9.3"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 3e4f061658e0c8f36c820802fa809e0fd812b85687a9a2f5430bc3d0368e37d1c9605c3ce9b39df9a05af2ece67b1d844f9f6ea8ff42819f13bcb80f85629af0
+  checksum: 17b8f816050b412403e38d48eef0e893deb6be522d6dc7caf105e54a72e34daf6835c447735fd2b28b66784e72bfbf87f627abb4818a8e43d1fa8106396128dc
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@4.8.4#~builtin<compat/typescript>":
-  version: 4.8.4
-  resolution: "typescript@patch:typescript@npm%3A4.8.4#~builtin<compat/typescript>::version=4.8.4&hash=701156"
+"typescript@patch:typescript@4.9.3#~builtin<compat/typescript>":
+  version: 4.9.3
+  resolution: "typescript@patch:typescript@npm%3A4.9.3#~builtin<compat/typescript>::version=4.9.3&hash=701156"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 301459fc3eb3b1a38fe91bf96d98eb55da88a9cb17b4ef80b4d105d620f4d547ba776cc27b44cc2ef58b66eda23fe0a74142feb5e79a6fb99f54fc018a696afa
+  checksum: ef65c22622d864497d0a0c5db693523329b3284c15fe632e93ad9aa059e8dc38ef3bd767d6f26b1e5ecf9446f49bd0f6c4e5714a2eeaf352805dc002479843d1
   languageName: node
   linkType: hard
 
@@ -6163,12 +6150,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici@npm:5.11.0":
-  version: 5.11.0
-  resolution: "undici@npm:5.11.0"
+"undici@npm:5.12.0, undici@npm:^5.11.0":
+  version: 5.12.0
+  resolution: "undici@npm:5.12.0"
   dependencies:
     busboy: ^1.6.0
-  checksum: 20669ef4023d24a75e81ed8142829f525f16af14d61f833b5f19cfc6bed7c706adde343a190d764dcceb227eba3211222d2b194010462a2ca221a7da0487f563
+  checksum: fbc227704943c05aa3dc1630695e10309c17d0a535678594d136db107c50593248e9ace70e1ab77496a6c837bf14aa2ab3c501a7a6c45fb6277dbf0846e15ffe
   languageName: node
   linkType: hard
 
@@ -6176,15 +6163,6 @@ __metadata:
   version: 5.9.1
   resolution: "undici@npm:5.9.1"
   checksum: 8acabbac8e18943ff822574f831d03d65e697e66ef486a679763f7778f37b28980caf7097ededf4017b58c099809e8efd8509a6688f60638360fb86ef47a59df
-  languageName: node
-  linkType: hard
-
-"undici@npm:^5.11.0":
-  version: 5.12.0
-  resolution: "undici@npm:5.12.0"
-  dependencies:
-    busboy: ^1.6.0
-  checksum: fbc227704943c05aa3dc1630695e10309c17d0a535678594d136db107c50593248e9ace70e1ab77496a6c837bf14aa2ab3c501a7a6c45fb6277dbf0846e15ffe
   languageName: node
   linkType: hard
 
@@ -6479,35 +6457,41 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:3.1.8":
-  version: 3.1.8
-  resolution: "vite@npm:3.1.8"
+"vite@npm:3.2.4":
+  version: 3.2.4
+  resolution: "vite@npm:3.2.4"
   dependencies:
     esbuild: ^0.15.9
     fsevents: ~2.3.2
-    postcss: ^8.4.16
+    postcss: ^8.4.18
     resolve: ^1.22.1
-    rollup: ~2.78.0
+    rollup: ^2.79.1
   peerDependencies:
+    "@types/node": ">= 14"
     less: "*"
     sass: "*"
     stylus: "*"
+    sugarss: "*"
     terser: ^5.4.0
   dependenciesMeta:
     fsevents:
       optional: true
   peerDependenciesMeta:
+    "@types/node":
+      optional: true
     less:
       optional: true
     sass:
       optional: true
     stylus:
       optional: true
+    sugarss:
+      optional: true
     terser:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 982696ad134577dd9915c4c3548ad36ddcf5dc6d341058548a670a13d860e4cdaaf2b320a59221f178018df089d148b9980e9a344316bef12b698a1c1abc7390
+  checksum: 0f3e8f89c15809bd6bd8dec54b04b7c9b87374314d00928035f9d70190b4b220e8206b5d77a1e4097a5019cebf7862df4fbc11fbbb35c4f75f359999123d2c25
   languageName: node
   linkType: hard
 
