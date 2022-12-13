@@ -22,7 +22,9 @@ export function PostList({ title, posts = [] }: Props) {
             <li>
               -&nbsp;
               <a href={href} class="underline underline-offset-4" title={title}>
-                {title}
+                {title?.startsWith("TIL: ")
+                  ? title.slice("TIL: ".length)
+                  : title}
               </a>
             </li>
           )}
