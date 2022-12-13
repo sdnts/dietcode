@@ -23,6 +23,23 @@ export default function Root() {
         <Title>Dietcode | Sid's blog</Title>
         <Meta charset="utf-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
+        <Meta name="title" content="Dietcode | Sid's blog" />
+        <Meta name="description" content="Sid's adventures with computers" />
+        <Meta name="og:type" content="website" />
+        <Meta name="og:url" content="https://dietcode.io/" />
+        <Meta name="og:title" content="Dietcode | Sid's blog" />
+        <Meta name="og:description" content="Sid's adventures with computers" />
+        <Meta name="og:image" content="https://dietcode.io/meta.png" />
+        <Meta name="twitter:card" content="summary" />
+        <Meta name="twitter:url" content="https://dietcode.io/" />
+        <Meta name="twitter:title" content="Dietcode | Sid's blog" />
+        <Meta
+          name="twitter:description"
+          content="Sid's adventures with computers"
+        />
+        <Meta name="twitter:image" content="https://dietcode.io/meta.png" />
+        <Meta name="twitter:creator" content="@sdnts_" />
+        <Meta name="twitter:site" content="@sdnts_" />
 
         <Link rel="preconnect" href="https://fonts.bunny.net" />
         <Link
