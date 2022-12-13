@@ -16,7 +16,8 @@ export function Prose({ children }: Props) {
         "prose-pre:p-0 prose-pre:whitespace-pre-wrap",
         "prose-code:bg-mauve-4",
         "prose-a:break-all",
-        "prose-img:w-fit prose-img:mx-auto"
+        "prose-img:w-fit prose-img:mx-auto",
+        "prose-hr:border-mauve-8 prose-hr:w-24 prose-hr:mx-auto"
       )}
     >
       {children}

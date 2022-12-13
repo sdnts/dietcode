@@ -1,4 +1,5 @@
 import mdx from "@mdx-js/rollup";
+import langDockerfile from "highlight.js/lib/languages/dockerfile";
 import langHttp from "highlight.js/lib/languages/http";
 import rehypeHighlight from "rehype-highlight";
 import cfPagesAdapter from "solid-start-cloudflare-pages";
@@ -12,7 +13,18 @@ export default defineConfig({
         jsx: true,
         jsxImportSource: "solid-js",
         providerImportSource: "solid-mdx",
-        rehypePlugins: [[rehypeHighlight, { languages: { http: langHttp } }]],
+        rehypePlugins: [
+          [
+            rehypeHighlight,
+            {
+              languages: {
+                http: langHttp,
+                docker: langDockerfile,
+                vagrant: langDockerfile,
+              },
+            },
+          ],
+        ],
       }),
       enforce: "pre",
     },
