@@ -25,6 +25,7 @@ export default function Root() {
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta name="title" content="Dietcode | Sid's blog" />
         <Meta name="description" content="Sid's adventures with computers" />
+        <Meta name="robots" content="index, follow" />
         <Meta name="og:type" content="website" />
         <Meta name="og:url" content="https://dietcode.io/" />
         <Meta name="og:title" content="Dietcode | Sid's blog" />
