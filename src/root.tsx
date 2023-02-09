@@ -53,6 +53,12 @@ export default function Root() {
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github-dark-dimmed.min.css"
         />
+
+        <script
+          defer
+          data-domain="dietcode.io"
+          src="https://plausible.io/js/script.js"
+        ></script>
       </Head>
       <Body
         class={clsx("flex justify-center", "bg-mauve-1 text-mauve-12", "mb-24")}
