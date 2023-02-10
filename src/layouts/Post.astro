@@ -1,0 +1,39 @@
+---
+import type { CollectionEntry } from "astro:content";
+import FormattedDate from "../components/FormattedDate.astro";
+import Prose from "../components/Prose.astro";
+import Page from "./Page.astro";
+
+type Props = CollectionEntry<"post">["data"];
+
+const { title, description, date, tags } = Astro.props;
+---
+
+<Page title={title} description={description}>
+  <div class="flex items-center justify-between text-mauve-11 h-12">
+    <FormattedDate date={date} />
+
+    <ul class="flex list-none space-x-4">
+      {tags.map((t) => <li>{t}</li>)}
+    </ul>
+  </div>
+
+  <Prose>
+    <h1 class="font-mono font-medium">
+      {title}
+    </h1>
+
+    <slot />
+  </Prose>
+
+  <footer class="mt-12 text-mauve-11 italic">
+    If you think this post contains inaccuracies, please email me at{" "}
+    <a
+      href="mailto:sid@dietcode.io"
+      title="sid@dietcode.io"
+      class="underline underline-offset-2"
+    >
+      sid@dietcode.io
+    </a>
+  </footer>
+</Page>

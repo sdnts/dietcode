@@ -1,0 +1,16 @@
+---
+import { getCollection } from "astro:content";
+import PostList from "../components/PostList.astro";
+import Page from "../layouts/Page.astro";
+import { sort } from "../util/sort";
+
+const tils = sort(await getCollection("til"));
+const posts = sort(await getCollection("post"));
+---
+
+<Page>
+  <div class="space-y-8">
+    <PostList title="til" posts={tils} />
+    <PostList title="posts" posts={posts} />
+  </div>
+</Page>
