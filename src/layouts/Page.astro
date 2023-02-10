@@ -1,0 +1,28 @@
+---
+import Meta from "../components/Meta.astro";
+import Header from "../components/Header.astro";
+
+export type Props = {
+  title?: string;
+  description?: string;
+};
+
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <Meta title={title} description={description} />
+  </head>
+  <body
+    class:list={["flex justify-center", "bg-mauve-1 text-mauve-12", "mb-24"]}
+  >
+    <div class="w-full max-w-[65ch] mx-8 lg:mx-0">
+      <Header />
+      <main>
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>

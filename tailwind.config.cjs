@@ -2,15 +2,15 @@ const colors = require("@radix-ui/colors");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,ts,tsx}"],
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     colors: {
       mauve: Object.entries(colors.mauveDark).reduce((acc, [k, v]) => {
         acc[k.slice("mauve".length)] = v;
         return acc;
       }, {}),
-      crimson: Object.entries(colors.crimsonDark).reduce((acc, [k, v]) => {
-        acc[k.slice("crimson".length)] = v;
+      mint: Object.entries(colors.mint).reduce((acc, [k, v]) => {
+        acc[k.slice("mint".length)] = v;
         return acc;
       }, {}),
       transparent: "rgba(0, 0, 0, 0)",
@@ -24,9 +24,9 @@ module.exports = {
         default: {
           css: {
             "--tw-prose-body": theme("colors.mauve[12]"),
-            "--tw-prose-headings": theme("colors.crimson[9]"),
+            "--tw-prose-headings": theme("colors.mint[9]"),
             "--tw-prose-lead": theme("colors.mauve[12]"),
-            "--tw-prose-links": theme("colors.crimson[9]"),
+            "--tw-prose-links": theme("colors.mint[9]"),
             "--tw-prose-bold": theme("colors.mauve[12]"),
             "--tw-prose-counters": theme("colors.mauve[12]"),
             "--tw-prose-bullets": theme("colors.mauve[11]"),
