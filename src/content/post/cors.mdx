@@ -5,8 +5,6 @@ date: "2022-12-08"
 tags: ["security", "cors", "javascript"]
 ---
 
-import AnchoredHeading from "../../components/AnchoredHeading.astro";
-
 I've been making chages to [R2](https://developers.cloudflare.com/r2/)'s CORS implementation
 this week, and now I think I know more about CORS than anyone really needs to know,
 especially how S3 implements it 🤮. It gets a bad rep. At its core, it is a remarkably
@@ -300,7 +298,7 @@ out of the browser's shell. `curl` isn't an attack vector because that indicates
 that the attacker has physical access to your computer, which is very much not what
 CORS is supposed to protect against.
 
-### <AnchoredHeading id="tldr">TL;DR</AnchoredHeading>
+### TL;DR
 
 Say you have a server on `userstore.com`. Authentication is irrelevant, but you do
 not want just about anyone to be able to send you requests, or embed your content.
