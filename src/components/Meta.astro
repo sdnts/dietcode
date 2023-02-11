@@ -51,5 +51,12 @@ const image = new URL(canonicalURL.pathname + "og.png", Astro.site);
 />
 
 <!-- Plausible -->
-<script defer data-domain="dietcode.io" src="https://plausible.io/js/script.js"
-></script>
+{
+  import.meta.env.PROD && (
+    <script
+      defer
+      data-domain="dietcode.io"
+      src="https://plausible.io/js/script.js"
+    />
+  )
+}
