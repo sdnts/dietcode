@@ -70,7 +70,7 @@ const og = (): AstroIntegration => ({
               pathname.startsWith("t/") ? "til" : "post"
             }/${pathname.slice(2, -1)}.mdx`
           );
-          // const file = fs.readFileSync("src/content/" + path + ".mdx");
+
           const { title } = parseFrontmatter(file).data;
           const svg = await satori(render(title), {
             width: 1200,

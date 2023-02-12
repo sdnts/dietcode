@@ -25,7 +25,7 @@ substitute for proper authorization, again, because it can be easily bypassed.
 CORS stands for Cross-Origin Resource Sharing by the way. `example.com` and `localhost:3000`
 are examples of "origins".
 
-### How does it work?
+## How does it work?
 
 The best way to learn how CORS policies work is to build them yourself, so we'll
 do that. If you're in a hurry, skip to the [TL;DR](#tldr).
@@ -71,7 +71,7 @@ you can set up a CORS policy on your server, which is fancy-talk for defining wh
 kind of clients are allowed to talk to your server, and what kinds of actions they
 can perform. We'll do this as we go along. If you're in a hurry, skip to the [TL;DR](#tldr).
 
-### Getting HEAD requests to work
+## Getting HEAD requests to work
 
 To really understand what's happening, our `fetch` call isn't going to help us much,
 so let's look at the raw HTTP request that went out:
@@ -151,7 +151,7 @@ a client can do if it is seeing CORS errors, and this is by design.
 Sick, so this was simple, all we had to do was set a single header in the server's
 response. Let's try to get our `PUT` / `GET` requests working next.
 
-### CORS Preflights
+## CORS Preflights
 
 Let's wade into the (apparently) more confusing parts of CORS. We want to now try
 and get our `PUT` request to work, so we modify our `fetch` call:
@@ -263,7 +263,7 @@ are only set on the server!
 Alright now that you know this, **please stop setting `Access-Control-Allow-Origin`
 to `*`! You're unnecessarily allowing all kinds of actors on to your server!**
 
-### The ugly bits
+## The ugly bits
 
 So far, things have been kinda elegant, right? The browser tries to minimize the
 number of requests it sends to your server. If it thinks the request cannot really
@@ -286,7 +286,7 @@ To err on the side of caution, the browser will preflight such requests. [MDN's 
 is a surprisingly good read to understand how browsers decide which requests to preflight.
 Hopefully that page will feel a lot less dense now that you've read this post.
 
-### How does CORS actually help with security?
+## How does CORS actually help with security?
 
 If it hasn't been obvious so far, CORS only protects you if your client is willing
 to respect the `Access-Control-*` headers. Web browsers are very strict about this,
@@ -298,7 +298,7 @@ out of the browser's shell. `curl` isn't an attack vector because that indicates
 that the attacker has physical access to your computer, which is very much not what
 CORS is supposed to protect against.
 
-### TL;DR
+## TL;DR
 
 Say you have a server on `userstore.com`. Authentication is irrelevant, but you do
 not want just about anyone to be able to send you requests, or embed your content.
@@ -375,7 +375,7 @@ is not as straight-forward as checking the request's verb. These are documented 
 well in [MDN's CORS documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS),
 which is a great read regardless.
 
-### Conclusion
+## Conclusion
 
 Hopefully this has demystified CORS for people reading! Most full-stack developers
 think CORS is an untameable beast, but I think that mostly comes from a place of ignorance. I
