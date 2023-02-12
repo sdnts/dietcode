@@ -10,7 +10,7 @@ export async function get(context: any) {
 
   return rss({
     title: "Dietcode | Sid's blog",
-    description: "Sid's adventures with computers",
+    description: "Bite-sized slices of Sid's adventures with computers",
     site: context.site,
     items: items.map((item) => ({
       title: item.data.title,
