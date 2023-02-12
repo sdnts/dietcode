@@ -65,14 +65,13 @@ const og = (): AstroIntegration => ({
           if (!pathname.startsWith("p/") && !pathname.startsWith("t/"))
             continue;
 
+          let isTIL = pathname.startsWith("t/");
           const file = fs.readFileSync(
-            `src/content/${
-              pathname.startsWith("t/") ? "til" : "post"
-            }/${pathname.slice(2, -1)}.mdx`
+            `src/content/${isTIL ? "til" : "post"}/${pathname.slice(2, -1)}.mdx`
           );
 
           const { title } = parseFrontmatter(file).data;
-          const svg = await satori(render(title), {
+          const svg = await satori(render(isTIL ? `TIL:\n${title}` : title), {
             width: 1200,
             height: 630,
             fonts: [
