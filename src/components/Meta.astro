@@ -57,8 +57,22 @@ const image = new URL(
   href="https://fonts.bunny.net/css?family=inter:400,800|jetbrains-mono:400&display=swap"
 />
 
-<!-- Plausible -->
+<!-- Analytics -->
+<script defer is:inline>
+  (() => {
+    if (window.location.hostname === "localhost") return;
+
+    fetch("https://in.sdnts.dev/a", {
+      method: "POST",
+      body: JSON.stringify({
+        type: "page_view",
+        path: window.location.pathname,
+      }),
+    });
+  })();
+</script>
 {
+  // Temporary, until I can make sure that my InfluxDB setup is working properly
   import.meta.env.PROD && (
     <script
       defer
