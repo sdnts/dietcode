@@ -14,7 +14,7 @@ const { title, description, date, tags } = Astro.props;
     <FormattedDate date={date} />
 
     <ul class="flex list-none space-x-4">
-      {tags.map((t) => <li>{t}</li>)}
+      {tags.sort().map((t) => <li>{t}</li>)}
     </ul>
   </div>
 
