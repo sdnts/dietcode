@@ -14,8 +14,8 @@ const { title, posts } = Astro.props;
   <ul class="ml-5 flex flex-col space-y-2">
     {
       posts.map(({ collection, slug, data: { title } }) => (
-        <li>
-          -&nbsp;
+        <li class="flex">
+          -&nbsp;&nbsp;
           <a
             href={collection === "til" ? `/t/${slug}` : `/p/${slug}`}
             class="underline underline-offset-4"
