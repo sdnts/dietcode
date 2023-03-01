@@ -71,13 +71,3 @@ const image = new URL(
     });
   })();
 </script>
-{
-  // Temporary, until I can make sure that my InfluxDB setup is working properly
-  import.meta.env.PROD && (
-    <script
-      defer
-      data-domain="dietcode.io"
-      src="https://plausible.io/js/script.js"
-    />
-  )
-}
