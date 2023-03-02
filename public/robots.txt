@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dietcode.io/sitemap-index.xml
