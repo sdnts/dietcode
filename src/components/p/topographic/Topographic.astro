@@ -7,7 +7,6 @@
 
   const width = window.innerWidth;
   const height = 400;
-  // const fg = 0xffffff;
   const fg = 0xf5e6d4;
 
   const scene = new THREE.Scene();
@@ -146,6 +145,7 @@
   scene.add(new THREE.Mesh(geometry, material));
 
   document.getElementById("demo").appendChild(renderer.domElement);
+
   function frame() {
     requestAnimationFrame(frame);
 

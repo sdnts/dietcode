@@ -2,6 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
 import Prose from "../components/Prose.astro";
+import Tags from "../components/Tags.astro";
 import Page from "./Page.astro";
 
 type Props = CollectionEntry<"post">["data"];
@@ -12,10 +13,7 @@ const { title, description, date, tags } = Astro.props;
 <Page title={title} description={description}>
   <div class="flex items-center justify-between text-mauve-11 h-12">
     <FormattedDate date={date} />
-
-    <ul class="flex list-none space-x-4">
-      {tags.sort().map((t) => <li>{t}</li>)}
-    </ul>
+    <Tags tags={tags} />
   </div>
 
   <Prose>

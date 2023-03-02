@@ -1,0 +1,9 @@
+---
+export type Props = { tags: string[] };
+
+const { tags } = Astro.props;
+---
+
+<ul class="list-none flex flex-wrap justify-end space-x-4">
+  {tags.sort().map((t) => <li>{t}</li>)}
+</ul>

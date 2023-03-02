@@ -1,6 +1,6 @@
 ---
-import Meta from "../components/Meta.astro";
 import Header from "../components/Header.astro";
+import Meta from "../components/Meta.astro";
 
 export type Props = {
   title?: string;
@@ -18,7 +18,7 @@ const { title, description } = Astro.props;
   <body
     class:list={["flex justify-center", "bg-mauve-1 text-mauve-12", "mb-24"]}
   >
-    <div class="w-full max-w-[65ch] mx-8 lg:mx-0">
+    <div class="max-w-[65ch] mx-8 lg:mx-0">
       <Header />
       <main>
         <slot />
