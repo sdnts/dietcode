@@ -112,15 +112,7 @@ export default defineConfig({
     gfm: true,
     shikiConfig: {
       theme: "poimandres",
-      langs: [
-        "docker",
-        "fish",
-        "glsl",
-        "ruby",
-        "rust",
-        "sh",
-        "typescript",
-      ] as any[],
+      langs: ["docker", "glsl", "ruby", "rust", "sh", "typescript"] as any[],
       wrap: false,
     },
   },
