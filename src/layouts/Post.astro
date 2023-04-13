@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
+import PostFooter from "../components/PostFooter.astro";
 import Prose from "../components/Prose.astro";
 import Tags from "../components/Tags.astro";
 import Page from "./Page.astro";
@@ -24,14 +25,5 @@ const { title, description, date, tags } = Astro.props;
     <slot />
   </Prose>
 
-  <footer class="mt-12 text-mauve-11 italic">
-    If you think this post contains inaccuracies, please email me at{" "}
-    <a
-      href="mailto:sid@dietcode.io"
-      title="sid@dietcode.io"
-      class="underline underline-offset-2"
-    >
-      sid@dietcode.io
-    </a>
-  </footer>
+  <PostFooter />
 </Page>
