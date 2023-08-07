@@ -59,15 +59,15 @@ const image = new URL(
 
 <!-- Analytics -->
 <script defer is:inline>
-  (() => {
-    if (window.location.hostname === "localhost") return;
+(() => {
+  if (window.location.hostname === "localhost") return;
 
-    fetch("https://in.sdnts.dev/a", {
-      method: "POST",
-      body: JSON.stringify({
-        type: "page_view",
-        path: window.location.pathname,
-      }),
-    });
-  })();
+  fetch("https://in.sdnts.dev/m", {
+    method: "POST",
+    body: JSON.stringify({
+      name: "page_view",
+      path: window.location.pathname,
+    }),
+  });
+})();
 </script>
