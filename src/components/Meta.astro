@@ -57,17 +57,3 @@ const image = new URL(
   href="https://fonts.bunny.net/css?family=inter:400,800|jetbrains-mono:400&display=swap"
 />
 
-<!-- Analytics -->
-<script defer is:inline>
-(() => {
-  if (window.location.hostname === "localhost") return;
-
-  fetch("https://in.sdnts.dev/m", {
-    method: "POST",
-    body: JSON.stringify({
-      name: "page_view",
-      path: window.location.pathname,
-    }),
-  });
-})();
-</script>
