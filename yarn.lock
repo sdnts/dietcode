@@ -22,10 +22,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/compiler@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "@astrojs/compiler@npm:2.0.1"
-  checksum: 7d4d054fbe423c938fd1b5e4139841d91406d444cc382ab7f443fd5ea6eae92554e73ddf8ca0a356b40849f69214235b2e24805775e8361c2022a3c2a011a015
+"@astrojs/compiler@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "@astrojs/compiler@npm:2.1.0"
+  checksum: af366d359c509f283a90f6577d73b3edabb249a4656caf665d4adbfc551837e6428da786c6a11e93d65bb0c168499eec76110704b125c2c167fd31fd3161c5f7
   languageName: node
   linkType: hard
 
@@ -36,9 +36,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/markdown-remark@npm:3.0.0":
-  version: 3.0.0
-  resolution: "@astrojs/markdown-remark@npm:3.0.0"
+"@astrojs/markdown-remark@npm:3.1.0":
+  version: 3.1.0
+  resolution: "@astrojs/markdown-remark@npm:3.1.0"
   dependencies:
     "@astrojs/prism": ^3.0.0
     github-slugger: ^2.0.0
@@ -54,17 +54,16 @@ __metadata:
     unist-util-visit: ^4.1.2
     vfile: ^5.3.7
   peerDependencies:
-    astro: ^3.0.0
-  checksum: b9006fb6b3ffedfb2d9a9f49d3f0f382b0d7c95456de3a32f6bdfc6b36a07625bd61aefae93a894ebe7acd19b91d1f6309b176289a478632d21c27003b69aad6
+    astro: ^3.0.11
+  checksum: f483ef90d0c037c1a3dd494ee2b82bbab3080d84195d5915be990a6c2a24c2ac2b6000f3e52d83a4730971c1ae8c52d412e59c229bbdcdc405f6ad9168a458fb
   languageName: node
   linkType: hard
 
-"@astrojs/mdx@npm:1.0.0":
-  version: 1.0.0
-  resolution: "@astrojs/mdx@npm:1.0.0"
+"@astrojs/mdx@npm:1.0.3":
+  version: 1.0.3
+  resolution: "@astrojs/mdx@npm:1.0.3"
   dependencies:
-    "@astrojs/markdown-remark": 3.0.0
-    "@astrojs/prism": 3.0.0
+    "@astrojs/markdown-remark": 3.1.0
     "@mdx-js/mdx": ^2.3.0
     acorn: ^8.10.0
     es-module-lexer: ^1.3.0
@@ -74,20 +73,18 @@ __metadata:
     hast-util-to-html: ^8.0.4
     kleur: ^4.1.4
     rehype-raw: ^6.1.1
-    remark-frontmatter: ^4.0.1
     remark-gfm: ^3.0.1
     remark-smartypants: ^2.0.0
-    shiki: ^0.14.3
     source-map: ^0.7.4
     unist-util-visit: ^4.1.2
     vfile: ^5.3.7
   peerDependencies:
-    astro: ^3.0.0
-  checksum: 44d1658505840a0f041b6fa67dab24465bca054b52f0f2e855db269f1f0e8d2c2e2273906e8c581cacf6197276af2a4e9b43e65a360e7ba6c565732302fbeb2a
+    astro: ^3.0.11
+  checksum: 45c9d948f766cda30e93bf3cd07eaff88994bf4a13c458643e177ebfc73c01d9363d4b55fa6ef7fad38ce35b9098eb30b9f76a2a371934ff20b833fd70cf63e8
   languageName: node
   linkType: hard
 
-"@astrojs/prism@npm:3.0.0, @astrojs/prism@npm:^3.0.0":
+"@astrojs/prism@npm:^3.0.0":
   version: 3.0.0
   resolution: "@astrojs/prism@npm:3.0.0"
   dependencies:
@@ -1092,9 +1089,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tailwindcss/typography@npm:0.5.9":
-  version: 0.5.9
-  resolution: "@tailwindcss/typography@npm:0.5.9"
+"@tailwindcss/typography@npm:0.5.10":
+  version: 0.5.10
+  resolution: "@tailwindcss/typography@npm:0.5.10"
   dependencies:
     lodash.castarray: ^4.4.0
     lodash.isplainobject: ^4.0.6
@@ -1102,7 +1099,7 @@ __metadata:
     postcss-selector-parser: 6.0.10
   peerDependencies:
     tailwindcss: "*"
-  checksum: b98e21bdd1798d7e4683499893c5c20ad43fcc8955d5d6eefbe1d30e98e9b6c28949ae8f276d39be9a66fafe843597717196bc5a0a2ac0f87ef86aa051ab9611
+  checksum: 9e7cbef6611e64542c658b651805594febb22d0f17b4bf435a67cc901f4972a9483d49420e070b19e46193b336264a058b771a0a7931ab03610a9aaa06078c0b
   languageName: node
   linkType: hard
 
@@ -1463,13 +1460,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:3.0.7":
-  version: 3.0.7
-  resolution: "astro@npm:3.0.7"
+"astro@npm:3.0.12":
+  version: 3.0.12
+  resolution: "astro@npm:3.0.12"
   dependencies:
-    "@astrojs/compiler": ^2.0.1
+    "@astrojs/compiler": ^2.1.0
     "@astrojs/internal-helpers": 0.2.0
-    "@astrojs/markdown-remark": 3.0.0
+    "@astrojs/markdown-remark": 3.1.0
     "@astrojs/telemetry": 3.0.1
     "@babel/core": ^7.22.10
     "@babel/generator": ^7.22.10
@@ -1504,7 +1501,7 @@ __metadata:
     ora: ^7.0.1
     p-limit: ^4.0.0
     path-to-regexp: ^6.2.1
-    preferred-pm: ^3.0.3
+    preferred-pm: ^3.1.2
     prompts: ^2.4.2
     rehype: ^12.0.1
     resolve: ^1.22.4
@@ -1520,12 +1517,15 @@ __metadata:
     vfile: ^5.3.7
     vite: ^4.4.9
     vitefu: ^0.2.4
-    which-pm: ^2.0.0
+    which-pm: ^2.1.1
     yargs-parser: ^21.1.1
     zod: 3.21.1
+  dependenciesMeta:
+    sharp:
+      optional: true
   bin:
     astro: astro.js
-  checksum: d1257eb9c3584470b91715e677623936174a9431a26807736a86b6e89c869bbafaf4700b44713fc3b02b6844543b8e335c155e95e7cc72a4e0f792d9ed693fe8
+  checksum: 520cbda1001fcc81b3bae5cd1c67e0316050dfb6d37cd18ac4daf28abbdace086da7ae79a380e44d801c2a9918cdd3207564501634f07f838afbd930d4c3ad90
   languageName: node
   linkType: hard
 
@@ -2574,15 +2574,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fault@npm:^2.0.0":
-  version: 2.0.1
-  resolution: "fault@npm:2.0.1"
-  dependencies:
-    format: ^0.2.0
-  checksum: c9b30f47d95769177130a9409976a899ed31eb598450fbad5b0d39f2f5f56d5f4a9ff9257e0bee8407cb0fc3ce37165657888c6aa6d78472e403893104329b72
-  languageName: node
-  linkType: hard
-
 "fflate@npm:^0.7.3":
   version: 0.7.4
   resolution: "fflate@npm:0.7.4"
@@ -2626,13 +2617,6 @@ __metadata:
     micromatch: ^4.0.2
     pkg-dir: ^4.2.0
   checksum: b4abdd37ab87c2172e2abab69ecbfed365d63232742cd1f0a165020fba1b200478e944ec2035c6aaf0ae142ac4c523cbf08670f45e59b242bcc295731b017825
-  languageName: node
-  linkType: hard
-
-"format@npm:^0.2.0":
-  version: 0.2.2
-  resolution: "format@npm:0.2.2"
-  checksum: 646a60e1336250d802509cf24fb801e43bd4a70a07510c816fa133aa42cdbc9c21e66e9cc0801bb183c5b031c9d68be62e7fbb6877756e52357850f92aa28799
   languageName: node
   linkType: hard
 
@@ -3587,17 +3571,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mdast-util-frontmatter@npm:^1.0.0":
-  version: 1.0.1
-  resolution: "mdast-util-frontmatter@npm:1.0.1"
-  dependencies:
-    "@types/mdast": ^3.0.0
-    mdast-util-to-markdown: ^1.3.0
-    micromark-extension-frontmatter: ^1.0.0
-  checksum: 0b0552047b753931da8265f2231a0b79aad1309ad7ad6599181c2d264e9b70b61acf742f29bdf2de8e901eb6eb37dd42b6f66007e735fd8138b2bf4d9acb0118
-  languageName: node
-  linkType: hard
-
 "mdast-util-gfm-autolink-literal@npm:^1.0.0":
   version: 1.0.3
   resolution: "mdast-util-gfm-autolink-literal@npm:1.0.3"
@@ -3813,17 +3786,6 @@ __metadata:
     micromark-util-types: ^1.0.1
     uvu: ^0.5.0
   checksum: 4b483c46077f696ed310f6d709bb9547434c218ceb5c1220fde1707175f6f68b44da15ab8668f9c801e1a123210071e3af883a7d1215122c913fd626f122bfc2
-  languageName: node
-  linkType: hard
-
-"micromark-extension-frontmatter@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "micromark-extension-frontmatter@npm:1.0.0"
-  dependencies:
-    fault: ^2.0.0
-    micromark-util-character: ^1.0.0
-    micromark-util-symbol: ^1.0.0
-  checksum: d0bacd6aadd6e33e26245628b93f5bcaf9a1de47787cea6807f8569213ceeb1376c37fadcf059280f5eafe6a07682bd148989e65489e99c9a3f4d523eea5f5c0
   languageName: node
   linkType: hard
 
@@ -4942,15 +4904,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"preferred-pm@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "preferred-pm@npm:3.0.3"
+"preferred-pm@npm:^3.1.2":
+  version: 3.1.2
+  resolution: "preferred-pm@npm:3.1.2"
   dependencies:
     find-up: ^5.0.0
     find-yarn-workspace-root2: 1.2.16
     path-exists: ^4.0.0
     which-pm: 2.0.0
-  checksum: 0de0948cb6ae22213f2ad7868032d89f1e1443d9caabc22ceeb9d284f19d359d65b67fab178f4db5c8c6ca6ae34642bdc72730b70ab1899ea158e2677a88a6d0
+  checksum: d66019f36765c4e241197cd34e2718c03d7eff953b94dacb278df9326767ccc2744d4e0bcab265fd9bb036f704ed5f3909d02594cd5663bd640a160fe4c1446c
   languageName: node
   linkType: hard
 
@@ -5127,18 +5089,6 @@ __metadata:
     rehype-stringify: ^9.0.0
     unified: ^10.0.0
   checksum: 08174db96f2d8d3543266ed36368e66ae050698b989498e1987f645f500606dcae946265341c87041d7db8d21927f686029792df116e9fd293c46b02a779869a
-  languageName: node
-  linkType: hard
-
-"remark-frontmatter@npm:^4.0.1":
-  version: 4.0.1
-  resolution: "remark-frontmatter@npm:4.0.1"
-  dependencies:
-    "@types/mdast": ^3.0.0
-    mdast-util-frontmatter: ^1.0.0
-    micromark-extension-frontmatter: ^1.0.0
-    unified: ^10.0.0
-  checksum: c1c448923cd0239e9eeafb42d7129c05081c9a1bca4c8164b562cbb748e80d103bfd058597a48d54000ce3c776200ab8ccd64a9679d955423f07e4a4e77f10c3
   languageName: node
   linkType: hard
 
@@ -5361,14 +5311,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@astrojs/mdx": 1.0.0
+    "@astrojs/mdx": 1.0.3
     "@astrojs/rss": 3.0.0
     "@astrojs/sitemap": 3.0.0
     "@astrojs/tailwind": 5.0.0
     "@radix-ui/colors": 2.1.0
     "@resvg/resvg-js": 2.4.1
-    "@tailwindcss/typography": 0.5.9
-    astro: 3.0.7
+    "@tailwindcss/typography": 0.5.10
+    astro: 3.0.12
     gray-matter: 4.0.3
     satori: 0.10.4
     tailwindcss: 3.3.3
@@ -6346,13 +6296,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"which-pm@npm:2.0.0, which-pm@npm:^2.0.0":
+"which-pm@npm:2.0.0":
   version: 2.0.0
   resolution: "which-pm@npm:2.0.0"
   dependencies:
     load-yaml-file: ^0.2.0
     path-exists: ^4.0.0
   checksum: e556635eaf237b3a101043a21c2890af045db40eac4df3575161d4fb834c2aa65456f81c60d8ea4db2d51fe5ac549d989eeabd17278767c2e4179361338ac5ce
+  languageName: node
+  linkType: hard
+
+"which-pm@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "which-pm@npm:2.1.1"
+  dependencies:
+    load-yaml-file: ^0.2.0
+    path-exists: ^4.0.0
+  checksum: 6e2aea3442d961f07cff1d712ddffee7f6ce2f582f5ebfe20967ca373affaa804d27d60bddc762b9ca4d11e8d2a9d5729aedd19992d4d0f1a218b146901dfd7e
   languageName: node
   linkType: hard
 
