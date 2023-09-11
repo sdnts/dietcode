@@ -3,7 +3,13 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build"
+    "build": "astro build",
+    "format": "prettier -w . --ignore-path .gitignore",
+    "check:format": "prettier -c . --ignore-path .gitignore"
+  },
+  "devDependencies": {
+    "prettier": "3.0.3",
+    "prettier-plugin-astro": "0.12.0"
   },
   "dependencies": {
     "@astrojs/mdx": "1.0.3",
