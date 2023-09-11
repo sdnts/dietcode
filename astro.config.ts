@@ -58,16 +58,20 @@ const og = (): AstroIntegration => ({
     "astro:build:done": async ({ dir, pages }) => {
       try {
         const jetBrainsMono = fs.readFileSync(
-          "public/JetBrainsMono-Regular.ttf"
+          "public/fonts/JetBrainsMono-Regular.ttf",
         );
 
+        let ogCount = 0;
         for (const { pathname } of pages) {
           if (!pathname.startsWith("p/") && !pathname.startsWith("t/"))
             continue;
 
           let isTIL = pathname.startsWith("t/");
           const file = fs.readFileSync(
-            `src/content/${isTIL ? "til" : "post"}/${pathname.slice(2, -1)}.mdx`
+            `src/content/${isTIL ? "til" : "post"}/${pathname.slice(
+              2,
+              -1,
+            )}.mdx`,
           );
 
           const { title } = parseFrontmatter(file).data;
@@ -92,11 +96,14 @@ const og = (): AstroIntegration => ({
           });
           fs.writeFileSync(
             `${dir.pathname}${pathname}og.png`,
-            resvg.render().asPng()
+            resvg.render().asPng(),
           );
+          ogCount++;
         }
 
-        console.log(`\x1b[32mog:\x1b[0m Generated OpenGraph images\n`);
+        console.log(
+          `\x1b[32mog:\x1b[0m Generated ${ogCount} OpenGraph images\n`,
+        );
       } catch (e) {
         console.error(e);
         console.log(`\x1b[31mog:\x1b[0m OpenGraph image generation failed\n`);

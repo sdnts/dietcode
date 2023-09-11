@@ -1,19 +1,102 @@
 ---
 import Header from "../components/Header.astro";
-import Meta from "../components/Meta.astro";
 
 export type Props = {
   title?: string;
   description?: string;
 };
 
-const { title, description } = Astro.props;
+const title = Astro.props.title ?? "Dietcode | Sid's blog";
+const description =
+  Astro.props.description ??
+  "Bite-sized slices of Sid's adventures with computers";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const image = new URL(
+  canonicalURL.pathname +
+    (canonicalURL.pathname.endsWith("/") ? "" : "/") +
+    "og.png",
+  Astro.site,
+);
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <Meta title={title} description={description} />
+    <!-- Global Metadata -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Fonts -->
+    <link
+      rel="preload"
+      href="/fonts/JetBrainsMono-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/JetBrainsMono-Medium.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/Inter-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <style>
+      @font-face {
+        font-family: "JetBrains Mono";
+        src: url("/fonts/JetBrainsMono-Regular.woff2");
+        font-weight: 400;
+        font-display: optional;
+      }
+      @font-face {
+        font-family: "JetBrains Mono";
+        src: url("/fonts/JetBrainsMono-Medium.woff2");
+        font-weight: 500;
+        font-display: optional;
+      }
+      @font-face {
+        font-family: "Inter";
+        font-weight: 400;
+        src: url("/fonts/Inter-Regular.woff2");
+        font-display: optional;
+      }
+    </style>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image} />
+    <meta name="twitter:creator" content="@sdnts_" />
+    <meta name="twitter:site" content="@sdnts_" />
   </head>
   <body
     class:list={["flex justify-center", "bg-mauve-1 text-mauve-12", "mb-24"]}

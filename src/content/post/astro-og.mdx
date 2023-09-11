@@ -274,7 +274,7 @@ const og = (): AstroIntegration => ({
       try {
         // Read a custom font into an ArrayBuffer
         const jetBrainsMono = fs.readFileSync(
-          "public/JetBrainsMono-Regular.ttf"
+          "public/JetBrainsMono-Regular.ttf",
         );
 
         for (const { pathname } of pages) {
@@ -287,7 +287,7 @@ const og = (): AstroIntegration => ({
 
           // 3. Locate the source file for this resolved page. This depends heavily on your setup, but it should be straight-forward to do. After all, resolved pages and your source content would follow a similar structure!
           const file = fs.readFileSync(
-            `src/content/posts/${pathname.slice(2, -1)}.mdx`
+            `src/content/posts/${pathname.slice(2, -1)}.mdx`,
           );
 
           // 4. Parse frontmatter for our source file, and get our title
@@ -319,7 +319,7 @@ const og = (): AstroIntegration => ({
           // 8. Write this PNG to a predictable location. I keep this right next to the page itself. That way, I can link to it easily.
           fs.writeFileSync(
             `${dir.pathname}${pathname}og.png`,
-            resvg.render().asPng()
+            resvg.render().asPng(),
           );
         }
 
