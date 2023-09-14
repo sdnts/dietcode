@@ -111,12 +111,14 @@ const image = new URL(
     <!-- Analytics -->
     <script defer is:inline>
       (() => {
-        if (window.location.hostname === "localhost") return;
-
         fetch("https://in.sdnts.dev/a", {
           method: "POST",
           body: JSON.stringify({
             name: "page_view",
+            environment:
+              window.location.hostname === "localhost"
+                ? "development"
+                : "production",
             path: window.location.pathname,
           }),
         });
