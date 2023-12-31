@@ -124,7 +124,7 @@ append to our `Response`, Postman sees an event.
 
 Let's consume this stream from our client (the browser) instead of Postman though:
 
-```tsx
+```typescript
 const es = new EventSource(`https://localhost:8787`);
 es.addEventListener("open", (e) => console.log("Stream started"));
 es.addEventListener("error", (e) => console.log("Stream errored"));
