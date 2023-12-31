@@ -2,7 +2,7 @@ import rss from "@astrojs/rss";
 import { getCollection } from "astro:content";
 import { sort } from "../util/sort";
 
-export async function get(context: any) {
+export async function GET(context: any) {
   const items = sort([
     ...(await getCollection("post")),
     ...(await getCollection("til")),
