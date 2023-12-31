@@ -3,9 +3,9 @@ export type Props = { date: Date };
 
 const { date } = Astro.props;
 
-let year = new Intl.DateTimeFormat("en", { year: "numeric" }).format(date);
-let month = new Intl.DateTimeFormat("en", { month: "2-digit" }).format(date);
-let day = new Intl.DateTimeFormat("en", { day: "2-digit" }).format(date);
+let year = new Intl.DateTimeFormat("en-US", { year: "numeric", timeZone: 'CET' }).format(date);
+let month = new Intl.DateTimeFormat("en-US", { month: "2-digit", timeZone: 'CET' }).format(date);
+let day = new Intl.DateTimeFormat("en-US", { day: "2-digit", timeZone: 'CET' }).format(date);
 ---
 
 <div class="whitespace-nowrap mr-4">
