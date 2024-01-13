@@ -58,7 +58,7 @@ const og = (): AstroIntegration => ({
     "astro:build:done": async ({ dir, pages }) => {
       try {
         const jetBrainsMono = fs.readFileSync(
-          "public/fonts/JetBrainsMono-Regular.ttf",
+          "public/fonts/satori/JetBrainsMono-Regular.ttf",
         );
 
         let ogCount = 0;
