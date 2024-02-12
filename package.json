@@ -8,20 +8,20 @@
     "check:format": "prettier -c . --ignore-path .gitignore"
   },
   "devDependencies": {
-    "prettier": "3.2.1",
-    "prettier-plugin-astro": "0.12.3"
+    "prettier": "3.2.5",
+    "prettier-plugin-astro": "0.13.0"
   },
   "dependencies": {
-    "@astrojs/mdx": "2.0.4",
-    "@astrojs/rss": "4.0.2",
-    "@astrojs/sitemap": "3.0.4",
+    "@astrojs/mdx": "2.1.1",
+    "@astrojs/rss": "4.0.5",
+    "@astrojs/sitemap": "3.0.5",
     "@astrojs/tailwind": "5.1.0",
     "@radix-ui/colors": "3.0.0",
     "@resvg/resvg-js": "2.6.0",
     "@tailwindcss/typography": "0.5.10",
-    "astro": "4.1.2",
+    "astro": "4.3.6",
     "gray-matter": "4.0.3",
-    "satori": "0.10.11",
+    "satori": "0.10.13",
     "tailwindcss": "3.4.1"
   },
   "packageManager": "yarn@4.1.0"
