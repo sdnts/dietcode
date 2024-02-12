@@ -5,7 +5,7 @@ import { Resvg } from "@resvg/resvg-js";
 import type { AstroIntegration } from "astro";
 import { defineConfig } from "astro/config";
 import parseFrontmatter from "gray-matter";
-import fs from "node:fs";
+import fs from "node:fs/promises";
 import satori from "satori";
 
 const render = (title: string) => ({
@@ -57,7 +57,7 @@ const og = (): AstroIntegration => ({
   hooks: {
     "astro:build:done": async ({ dir, pages }) => {
       try {
-        const jetBrainsMono = fs.readFileSync(
+        const jetBrainsMono = await fs.readFile(
           "public/fonts/satori/JetBrainsMono-Regular.ttf",
         );
 
@@ -67,12 +67,20 @@ const og = (): AstroIntegration => ({
             continue;
 
           let isTIL = pathname.startsWith("t/");
-          const file = fs.readFileSync(
-            `src/content/${isTIL ? "til" : "post"}/${pathname.slice(
-              2,
-              -1,
-            )}.mdx`,
-          );
+          const file = await Promise.any([
+            fs.readFile(
+              `src/content/${isTIL ? "til" : "post"}/${pathname.slice(
+                2,
+                -1,
+              )}.md`,
+            ),
+            fs.readFile(
+              `src/content/${isTIL ? "til" : "post"}/${pathname.slice(
+                2,
+                -1,
+              )}.mdx`,
+            ),
+          ]);
 
           const { title } = parseFrontmatter(file).data;
           const svg = await satori(render(isTIL ? `TIL:\n${title}` : title), {
@@ -94,7 +102,7 @@ const og = (): AstroIntegration => ({
               value: 1200,
             },
           });
-          fs.writeFileSync(
+          await fs.writeFile(
             `${dir.pathname}${pathname}og.png`,
             resvg.render().asPng(),
           );
