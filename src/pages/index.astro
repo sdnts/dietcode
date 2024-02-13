@@ -1,13 +1,13 @@
 ---
 import { getCollection } from "astro:content";
-import Page from "../layouts/Page.astro";
+import Layout from "../layouts/Layout.astro";
 import { sort } from "../util/sort";
 import { formatDate } from "../util/formatDate";
 
 const posts = sort(await getCollection("post"));
 ---
 
-<Page>
+<Layout>
   <ul
     class="gap-x-6 gap-y-3"
     style="display: grid; grid-template-columns: 1fr min-content;"
@@ -27,4 +27,4 @@ const posts = sort(await getCollection("post"));
       ))
     }
   </ul>
-</Page>
+</Layout>
