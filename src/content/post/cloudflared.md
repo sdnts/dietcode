@@ -39,7 +39,7 @@ able to access on `https://grafana.sdnts.dev`. Here's how I did it:
 3. On the last step, it asks you set up a public hostname, and this is where you
    set up a mapping from a public domain to a service running on your machine, something
    like this:
-   ![A screenshot with text boxes that describe the mapping from the VPS's local port 3000 to the public hostname grafana.sdnts.dev.](/t/cloudflared/cloudflared-hostnames.png)
+   ![A screenshot with text boxes that describe the mapping from the VPS's local port 3000 to the public hostname grafana.sdnts.dev.](/p/cloudflared/cloudflared-hostnames.png)
    This tells `cloudflared` to forward all `HTTP` traffic on `grafana.sdnts.dev` to `localhost:3000`,
    pretty straight-forward, right? You can also forward other kinds of traffic if
    you wanted.

@@ -11,4 +11,4 @@ const post = defineCollection({
 	}),
 });
 
-export const collections = { post, til: post };
+export const collections = { post };

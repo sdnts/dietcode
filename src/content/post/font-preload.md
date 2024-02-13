@@ -29,7 +29,7 @@ You've got your Webfont files served from your domain, which lets the browser
 save on one TCP round-trip (not to mention you've stopped Google from snooping
 on your visitors), but this doesn't quite work:
 
-![I'm reloading a browser window with 4 big bold words and two buttons. As I do, the buttons jump around in the first 300ms of the reload.](/t/font-preload/without.gif)
+![I'm reloading a browser window with 4 big bold words and two buttons. As I do, the buttons jump around in the first 300ms of the reload.](/p/font-preload/without.gif)
 
 All I'm doing in that video is reloading the page. Watch the `New` and `Join`
 buttons on the bottom right, see how they jump around? That's happening because
@@ -52,7 +52,7 @@ to actually kick it off:
 
 And now, no intial layout shift:
 
-![The same browser window as before, but without the buttons jumping around](/t/font-preload/with.gif)
+![The same browser window as before, but without the buttons jumping around](/p/font-preload/with.gif)
 
 The `crossorigin` attribute tells the browser to send over CORS headers with this
 request. As far as I can tell, the issue doesn't have anything to do with CORS

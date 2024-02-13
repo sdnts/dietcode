@@ -63,27 +63,15 @@ const og = (): AstroIntegration => ({
 
         let ogCount = 0;
         for (const { pathname } of pages) {
-          if (!pathname.startsWith("p/") && !pathname.startsWith("t/"))
-            continue;
+          if (!pathname.startsWith("p/")) continue;
 
-          let isTIL = pathname.startsWith("t/");
           const file = await Promise.any([
-            fs.readFile(
-              `src/content/${isTIL ? "til" : "post"}/${pathname.slice(
-                2,
-                -1,
-              )}.md`,
-            ),
-            fs.readFile(
-              `src/content/${isTIL ? "til" : "post"}/${pathname.slice(
-                2,
-                -1,
-              )}.mdx`,
-            ),
+            fs.readFile(`src/content/post/${pathname.slice(2, -1)}.md`),
+            fs.readFile(`src/content/post/${pathname.slice(2, -1)}.mdx`),
           ]);
 
           const { title } = parseFrontmatter(file).data;
-          const svg = await satori(render(isTIL ? `TIL:\n${title}` : title), {
+          const svg = await satori(render(title), {
             width: 1200,
             height: 630,
             fonts: [
@@ -130,5 +118,8 @@ export default defineConfig({
       langs: ["docker", "glsl", "ruby", "rust", "sh", "typescript"] as any[],
       wrap: false,
     },
+  },
+  redirects: {
+    "/t/[...slug]": "/p/[...slug]",
   },
 });

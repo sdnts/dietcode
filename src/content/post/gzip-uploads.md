@@ -8,7 +8,7 @@ You will not believe how simple this is (I didn't!). Assuming `file` is a file h
 you've somehow acquired (either by letting the user pick a file or by using the
 File System API), here's all you need to do:
 
-```
+```js
 const gzippedStream = file
   .stream()
   .pipeThrough(new CompressionStream("gzip"))
@@ -17,7 +17,7 @@ const gzippedStream = file
 That's it. You can now take this gzipped stream and use it as a `Request` body in
 a `fetch` call:
 
-```
+```js
 fetch(
   "https://file-gobbler.com/upload",
   {

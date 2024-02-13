@@ -39,7 +39,7 @@ Since both of these _mean_ the same thing, they are rendered the same by your br
 text editor/whatever. The former is made up of two unicode characters, the `u` and
 an umlaut, and the latter is just a single unicode character: u with umlaut.
 
-![U with umlaut can be deconstructed as two unicode characters, a u and an umlaut](/t/unicode-normalization/umlaut-deconstruct.png)
+![U with umlaut can be deconstructed as two unicode characters, a u and an umlaut](/p/unicode-normalization/umlaut-deconstruct.png)
 
 This quickly becomes a problem for computers, because to them these two characters
 (u followed by umlaut & u with umlaut) are actually completely different things.

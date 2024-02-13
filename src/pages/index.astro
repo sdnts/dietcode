@@ -4,10 +4,7 @@ import Page from "../layouts/Page.astro";
 import { sort } from "../util/sort";
 import { formatDate } from "../util/formatDate";
 
-const posts = sort([
-  ...(await getCollection("til")),
-  ...(await getCollection("post")),
-]);
+const posts = sort(await getCollection("post"));
 ---
 
 <Page>
@@ -16,10 +13,10 @@ const posts = sort([
     style="display: grid; grid-template-columns: 1fr min-content;"
   >
     {
-      posts.map(({ collection, slug, data: { title, date } }) => (
+      posts.map(({ slug, data: { title, date } }) => (
         <li style="display: grid; grid-template-columns: subgrid; grid-column: 1 / -1">
           <a
-            href={collection === "til" ? `/t/${slug}` : `/p/${slug}`}
+            href={`/p/${slug}`}
             class="hover:opacity-50 transition-all"
             title={title}
           >
