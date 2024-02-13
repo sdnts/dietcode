@@ -1,16 +1,33 @@
 ---
 import { getCollection } from "astro:content";
-import PostList from "../components/PostList.astro";
 import Page from "../layouts/Page.astro";
 import { sort } from "../util/sort";
+import { formatDate } from "../util/formatDate";
 
-const tils = sort(await getCollection("til"));
-const posts = sort(await getCollection("post"));
+const posts = sort([
+  ...(await getCollection("til")),
+  ...(await getCollection("post")),
+]);
 ---
 
 <Page>
-  <div class="space-y-8">
-    <PostList title="til" posts={tils} />
-    <PostList title="posts" posts={posts} />
-  </div>
+  <ul
+    class="gap-x-6 gap-y-3"
+    style="display: grid; grid-template-columns: 1fr min-content;"
+  >
+    {
+      posts.map(({ collection, slug, data: { title, date } }) => (
+        <li style="display: grid; grid-template-columns: subgrid; grid-column: 1 / -1">
+          <a
+            href={collection === "til" ? `/t/${slug}` : `/p/${slug}`}
+            class="hover:opacity-50 transition-all"
+            title={title}
+          >
+            {title}
+          </a>
+          <span class="text-mauve-6 whitespace-nowrap">{formatDate(date)}</span>
+        </li>
+      ))
+    }
+  </ul>
 </Page>
