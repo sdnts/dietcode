@@ -2,7 +2,6 @@
 title: "How to actually preload fonts"
 description: "Turns out you need a unintuitive attribute to make it work correctly"
 date: "2023-10-08"
-tags: ["css"]
 ---
 
 _The_ best way to avoid layout shifts that occur because of font loading delays

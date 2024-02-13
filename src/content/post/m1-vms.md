@@ -2,7 +2,6 @@
 title: "Virtual Machines on the M1"
 description: 'I discovered what it takes to run VMs on an M1, especially because they don''t "just work"'
 date: "2022-12-13"
-tags: ["devops", "vagrant", "qemu", "vm"]
 ---
 
 For reasons that might become clear in a later post, I've been trying to get a simple

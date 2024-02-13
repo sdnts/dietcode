@@ -2,7 +2,6 @@
 title: "Convert Rust enums to inner values"
 description: "A deceptively simple problem. I wanted to basically create a method on a Rust Enum that has different return types based on the active enum variant. The solution I came up with works in the same way as `std::str::parse` does. Very powerful and extensible."
 date: "2023-01-04"
-tags: ["rust", "traits"]
 ---
 
 I've developed what I think is a pretty neat way to transform a Rust `enum` instance

@@ -2,7 +2,6 @@
 title: "Sockets"
 description: "Talking about sockets and file descriptors"
 date: "2022-11-11"
-tags: ["network", "tcp"]
 ---
 
 This word comes up **all** the time when you do network programming, but unfortunately

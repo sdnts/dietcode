@@ -2,7 +2,6 @@
 title: "Vagrant"
 description: "Vagrant lets you spin up pre-configured VMs on-demand. I figure out what I can do with this."
 date: "2022-12-12"
-tags: ["devops", "vagrant"]
 ---
 
 Vagrant lets you spin up pre-configured VMs on-demand. I presume this is extremely

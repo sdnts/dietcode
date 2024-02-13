@@ -2,7 +2,6 @@
 title: "Better loading states with Server-Sent Events"
 description: "SSE streams are one-way WebSocket connections that are miles easier to build"
 date: "2023-09-10"
-tags: ["server-sent-events", "http", "http2"]
 ---
 
 A couple of years ago when I was working on the first version of [Prisma's Data Platform](https://cloud.prisma.io),

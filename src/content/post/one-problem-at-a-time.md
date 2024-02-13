@@ -2,7 +2,6 @@
 title: "Doing exactly one thing at a time"
 description: "Just re-broadcasting Alex Vasquez of CodePen"
 date: "2022-11-14"
-tags: ["personal"]
 ---
 
 I first heard this from Alex Vasquez of CodePen:

@@ -2,7 +2,6 @@
 title: "TT muncher macros in Rust"
 description: 'TT-munching is a technique for writing complex macros in Rust. I''ll show you how to write a variadic "function" in Rust, AKA one that can take in any number of arguments.'
 date: "2023-03-27"
-tags: ["rust", "macros"]
 ---
 
 TT munching is a technique for writing sufficiently complex macros in Rust. Once

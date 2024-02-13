@@ -2,7 +2,6 @@
 title: "Unicode normalization"
 description: "How can two unicode characters look the same but mean different things?"
 date: "2022-11-24"
-tags: ["unicode"]
 ---
 
 So turns out Unicode is the gift that keeps on giving.

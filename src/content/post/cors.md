@@ -2,7 +2,6 @@
 title: "Demystifying CORS"
 description: "I've been making chages to R2's CORS implementation this week, and now I think I know more about CORS than anyone really needs to know, so I figured I'd at least get a blog post out of it"
 date: "2022-12-08"
-tags: ["security", "cors", "javascript"]
 ---
 
 I've been making chages to [R2](https://developers.cloudflare.com/r2/)'s CORS implementation

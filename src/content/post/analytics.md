@@ -2,7 +2,6 @@
 title: "Over-complicating my blog's infrastructure by building a custom analytics pipeline"
 description: "I got nerd-sniped recently, and in this post I explain how I wrangled together a Hetzner VPS, cloudflared and Workers to set up an analytics endpoint that is within 70ms from most places in the world."
 date: "2023-02-25"
-tags: ["vps", "cloudflared", "workers", "network"]
 ---
 
 Towards the end of last week, as I was reading [this](https://brew.sh/2023/02/16/homebrew-4.0.0/)

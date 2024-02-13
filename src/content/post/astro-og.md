@@ -2,7 +2,6 @@
 title: "Build-time, dynamic OpenGraph images with Astro & Satori"
 description: "I'll show you how every post on this blog has a unique OpenGraph image that has the post's title. These are generated using Satori & ReSVG at build time, but the same techniques can be applied to generate them on-demand as well."
 date: "2023-02-12"
-tags: ["astro", "satori", "opengraph"]
 ---
 
 I wanted to have each post of my blog have a unique OpenGraph preview. I think I

@@ -2,7 +2,6 @@
 title: "Writing to stdout is only as fast as your terminal"
 description: "Would you believe me if I told you what terminal you use heavily impacts how many requests-per-second your server can handle?"
 date: "2023-04-07"
-tags: ["performance", "streams", "rust"]
 ---
 
 Consider this barebones HTTP server:

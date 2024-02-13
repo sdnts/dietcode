@@ -2,7 +2,6 @@
 title: "cloudflared"
 description: "cloudflared is a bit of a niche technology for me because it only shines when you run some kind of server that is open to the Internet, but boy does it shine bright!"
 date: "2023-02-21"
-tags: ["network", "cloudflared", "vps"]
 ---
 
 `cloudflared` establishes a direct connection from your device to Cloudflare's network

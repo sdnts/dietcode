@@ -2,7 +2,6 @@
 title: "Setting up an M1 Mac to write AArch64 Assembly"
 description: "I'm going to show you how I set up my M1 Mac to be able to write & run Linux AArch64 Assembly. The experience is very similar to developing on a machine that actually runs ARM64 Linux."
 date: "2023-12-31"
-tags: ["asm", "aarch64"]
 ---
 
 When I write code, I like to have a split view in my [terminal](https://github.com/kovidgoyal/kitty)

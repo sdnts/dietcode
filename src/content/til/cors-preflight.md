@@ -2,7 +2,6 @@
 title: "Preflight requests in CORS"
 description: "When do CORS preflight requests go out?"
 date: "2022-11-29"
-tags: ["security", "cors", "javascript"]
 ---
 
 **Cross-origin requests are only preflighted if the browser thinks that the request might cause a server-side mutation**.

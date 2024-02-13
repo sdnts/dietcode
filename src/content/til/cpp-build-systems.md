@@ -2,7 +2,6 @@
 title: "The surprisingly complex world of C++ build systems"
 description: "I've been meaning to dig into C++ for a bunch of reasons, and surprisingly, getting a development environment set up on macOS was really hard. I've now set up a template repository on GitHub for anyone looking for a shortcut."
 date: "2022-12-18"
-tags: ["c++"]
 ---
 
 TL;DR: I've set up a template repository with my current setup over [on GitHub](https://github.com/sdnts/cpp).

@@ -2,7 +2,6 @@
 title: "Monotonic clocks"
 description: "Why do computers have two kinds of clocks for use in programs?"
 date: "2023-03-04"
-tags: ["time", "distributed-systems"]
 ---
 
 Did you know this snippet will not necessarily measure the time `someFunction`

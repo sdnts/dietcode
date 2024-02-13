@@ -2,7 +2,6 @@
 title: "Git remotes"
 description: "Turns out setting up your own Git remote on a VPS is stupid simple"
 date: "2023-03-29"
-tags: ["vps", "git"]
 ---
 
 **A git remote is (usually) just something called a "bare" repository.**

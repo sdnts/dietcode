@@ -2,7 +2,6 @@
 title: "Terminal Color Sequences"
 description: "How to render colors to your terminal. You don't need a library for this stuff, its ez"
 date: "2022-11-20"
-tags: ["fish"]
 ---
 
 Everyone likes a little bling in their terminals, come on. I personally like decorations

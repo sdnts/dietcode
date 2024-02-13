@@ -2,7 +2,6 @@
 title: "Cookies are a distributed storage mechanism"
 description: "Cookies can be so much more than vessels for authentication tokens"
 date: "2023-10-08"
-tags: ["http", "cookies"]
 ---
 
 Someone somewhere used cookies for authentication once, and for some reason

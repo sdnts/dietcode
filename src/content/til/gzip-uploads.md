@@ -2,7 +2,6 @@
 title: "gzip-ed, streaming uploads from browsers"
 description: "Can you compress files on your browser before you upload them to your server?"
 date: "2023-08-27"
-tags: ["javascript", "compression"]
 ---
 
 You will not believe how simple this is (I didn't!). Assuming `file` is a file handle

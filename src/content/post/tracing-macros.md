@@ -2,7 +2,6 @@
 title: "Understanding tracing's macros by rebuilding them from scratch"
 description: "The tracing / log crates expose complicated-looking macros like `trace!` that accept a whole bunch of different kinds of arguments. Surely building a macro like this isn't _easy_. Or is it?"
 date: "2023-03-28"
-tags: ["rust", "macros", "tracing"]
 ---
 
 The [`log`](https://docs.rs/log/0.4.17/log/index.html) crate exposes a bunch of

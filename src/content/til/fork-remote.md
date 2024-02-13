@@ -2,7 +2,6 @@
 title: "Switching out git remotes"
 description: "Miscellaneous git knowledge that may be helpful when hacking on OSS repositories"
 date: "2023-09-03"
-tags: ["git"]
 ---
 
 Say you cloned an interesting git repository and started hacking on it. You now

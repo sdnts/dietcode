@@ -2,7 +2,6 @@
 title: "Cryptographic Signatures"
 description: "What are signatures and what are they good for?"
 date: "2022-11-14"
-tags: ["network", "security", "tls"]
 ---
 
 **A signature is an encrypted hash**. A "signed" payload is proof that it was sent
