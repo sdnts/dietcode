@@ -7,22 +7,43 @@ import { formatDate } from "../util/formatDate";
 const posts = sort(await getCollection("post"));
 ---
 
+<style>
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
+  li {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Tailwind's md: */
+  @media (min-width: 768px) {
+    ul {
+      display: grid;
+      grid-template-columns: 1fr min-content;
+    }
+    li {
+      display: grid;
+      grid-template-columns: subgrid;
+      grid-column: 1 / -1;
+    }
+  }
+</style>
+
 <Layout>
-  <ul
-    class="gap-x-6 gap-y-3"
-    style="display: grid; grid-template-columns: 1fr min-content;"
-  >
+  <ul class:list={["gap-x-6", "gap-y-4 md:gap-y-3"]}>
     {
       posts.map(({ slug, data: { title, date } }) => (
-        <li style="display: grid; grid-template-columns: subgrid; grid-column: 1 / -1">
+        <li>
           <a
             href={`/p/${slug}`}
-            class="hover:opacity-50 transition-all"
+            class="text-lg md:text-base hover:opacity-50 transition-all"
             title={title}
           >
             {title}
           </a>
-          <span class="text-mauve-6 whitespace-nowrap">{formatDate(date)}</span>
+          <span class="text-mauve-8 whitespace-nowrap">{formatDate(date)}</span>
         </li>
       ))
     }

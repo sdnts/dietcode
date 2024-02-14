@@ -18,7 +18,9 @@ const { Content } = await post.render();
 ---
 
 <Layout title={post.data.title} description={post.data.description}>
-  <div class="mb-4 text-mauve-6 whitespace-nowrap">{formatDate(post.data.date)}</div>
+  <div class="mb-4 text-mauve-8 whitespace-nowrap">
+    {formatDate(post.data.date)}
+  </div>
 
   <Prose>
     <h1 class="font-mono font-medium">
@@ -55,4 +57,4 @@ const { Content } = await post.render();
       });
     });
   </script>
-</Page>
+</Layout>
