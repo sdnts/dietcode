@@ -53,9 +53,9 @@ const render = (title: string) => ({
 });
 
 const og = (): AstroIntegration => ({
-  name: "satori-og",
+  name: "og",
   hooks: {
-    "astro:build:done": async ({ dir, pages }) => {
+    "astro:build:done": async ({ dir, pages, logger }) => {
       try {
         const jetBrainsMono = await fs.readFile(
           "public/fonts/satori/JetBrainsMono-Regular.ttf",
@@ -97,12 +97,10 @@ const og = (): AstroIntegration => ({
           ogCount++;
         }
 
-        console.log(
-          `\x1b[32mog:\x1b[0m Generated ${ogCount} OpenGraph images\n`,
-        );
+        logger.info(`Generated ${ogCount} OpenGraph; images`);
       } catch (e) {
-        console.error(e);
-        console.log(`\x1b[31mog:\x1b[0m OpenGraph image generation failed\n`);
+        logger.error("OpenGraph image generation failed");
+        throw e;
       }
     },
   },
@@ -115,6 +113,7 @@ export default defineConfig({
     gfm: true,
     shikiConfig: {
       theme: "poimandres",
+      // biome-ignore lint/suspicious/noExplicitAny: `langs` expects a type it does not export
       langs: ["docker", "glsl", "ruby", "rust", "sh", "typescript"] as any[],
       wrap: false,
     },
