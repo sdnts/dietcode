@@ -1,11 +1,10 @@
 {
   "type": "module",
   "version": "0.0.1",
+  "packageManager": "yarn@4.1.0",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
-    "format": "prettier -w . --ignore-path .gitignore",
-    "check:format": "prettier -c . --ignore-path .gitignore"
+    "build": "astro build"
   },
   "devDependencies": {
     "prettier": "3.2.5",
@@ -23,6 +22,5 @@
     "gray-matter": "4.0.3",
     "satori": "0.10.13",
     "tailwindcss": "3.4.1"
-  },
-  "packageManager": "yarn@4.1.0"
+  }
 }
