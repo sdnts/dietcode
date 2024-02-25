@@ -19,7 +19,7 @@ const { Content } = await post.render();
 
 <Layout title={post.data.title} description={post.data.description}>
   <div class="mb-4 text-mauve-8 whitespace-nowrap">
-    {formatDate(post.data.date)}
+    {formatDate(post.data.date, "long")}
   </div>
 
   <Prose>
