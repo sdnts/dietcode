@@ -1,20 +1,20 @@
 ---
 export type Props = {
-  title?: string;
-  description?: string;
+	title?: string;
+	description?: string;
 };
 
 const title = Astro.props.title ?? "Dietcode | Sid's blog";
 const description =
-  Astro.props.description ??
-  "Bite-sized slices of Sid's adventures with computers";
+	Astro.props.description ??
+	"Bite-sized slices of Sid's adventures with computers";
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const image = new URL(
-  canonicalURL.pathname +
-    (canonicalURL.pathname.endsWith("/") ? "" : "/") +
-    "og.png",
-  Astro.site,
+	canonicalURL.pathname +
+		(canonicalURL.pathname.endsWith("/") ? "" : "/") +
+		"og.png",
+	Astro.site,
 );
 ---
 
