@@ -215,20 +215,11 @@ const image = new URL(
     </main>
 
     <!-- Analytics -->
-    <script defer is:inline>
-      (() => {
-        fetch("https://in.sdnts.dev/a", {
-          method: "POST",
-          body: JSON.stringify({
-            name: "page_view",
-            environment:
-              window.location.hostname === "localhost"
-                ? "development"
-                : "production",
-            path: window.location.pathname,
-          }),
-        });
-      })();
+    <script 
+      defer 
+      is:inline
+      data-site-id="dietcode.io" 
+      src="https://assets.onedollarstats.com/tracker.js"> 
     </script>
   </body>
 </html>
